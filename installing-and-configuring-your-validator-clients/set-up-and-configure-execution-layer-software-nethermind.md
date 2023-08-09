@@ -27,7 +27,7 @@ sudo apt-get install unzip libsnappy-dev libc6-dev libc6 -y
 ```bash
 cd
 curl -LO https://nethdev.blob.core.windows.net/builds/nethermind-1.20.1-9f39c0c7-linux-x64.zip
-echo "nethermind-1.20.1-9f39c0c7-linux-x64.zip" | md5sum --check
+echo "444bf523e0db9c23243b365e717b5b15 nethermind-1.20.1-9f39c0c7-linux-x64.zip" | md5sum --check
 ```
 
 _**Expected output:** Verify output of the checksum verification_
@@ -86,8 +86,7 @@ ExecStart=/usr/local/bin/nethermind/Nethermind.Runner \
   --Sync.SnapSync true \
   --Sync.AncientBodiesBarrier 11052984 \
   --Sync.AncientReceiptsBarrier 11052984 \
-  --Metrics.Enabled true \
-  --Metrics.PushGatewayUrl=http://localhost:9091/metrics
+  --Metrics.Enabled true 
   
 [Install]
 WantedBy=default.target
@@ -109,7 +108,9 @@ sudo systemctl start nethermind.service
 sudo systemctl status nethermind.service
 ```
 
-The output should say Nethermind is **“active (running)”.** Press CTRL-C to exit and Nethermind will continue to run. It should take 48 - 72 hours for Nethermind to sync on the Mainnet.
+**Expected output:** The output should say Nethermind is **“active (running)”.** Press CTRL-C to exit and Nethermind will continue to run. It should take 48 - 72 hours for Nethermind to sync on the Mainnet.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>sudo systemctl status nethermind.service</p></figcaption></figure>
 
 Use the following command to check the logs of Nethermind’s syncing process. Watch out for any warnings or errors.
 
@@ -120,7 +121,7 @@ sudo journalctl -fu nethermind -o cat | ccze -A
 
 **Expected output:**
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>sudo journalctl -fu nethermind -o cat | ccze -A</p></figcaption></figure>
 
 Press `CTRL-C` to exit.
 
@@ -128,4 +129,10 @@ If the Nethermind service is running smoothly, we can now enable it to fire up a
 
 ```bash
 sudo systemctl enable nethermind.service
+```
+
+**Expected output:**
+
+```
+Created symlink /etc/systemd/system/default.target.wants/nethermind.service → /etc/systemd/system/nethermind.service.
 ```

@@ -76,7 +76,7 @@ htop
 free -h
 ```
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><code>htop</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><code>htop</code></p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p><code>free -h</code></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><code>free -h</code></p></figcaption></figure>
 
