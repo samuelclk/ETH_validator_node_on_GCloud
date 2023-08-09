@@ -36,21 +36,18 @@ Even though having our SSH key access implemented means an attacker will need 25
 _**Install the software:**_
 
 ```bash
-***#Server:***
 sudo apt install -y fail2ban
 ```
 
 _**Open the configuration file:**_
 
 ```bash
-***#Server:***
 sudo nano /etc/fail2ban/jail.d/ssh.local
 ```
 
 _**Add the following contents to the configuration file:**_
 
 ```bash
-***#Server:***
 [sshd]
 enabled = true
 banaction = ufw
@@ -65,7 +62,6 @@ Once you're done, save and exit with `Ctrl+O`and `Enter`, then `Ctrl+X`.
 _**Finally, restart the service:**_
 
 ```bash
-***#Server:***
 sudo systemctl restart fail2ban
 ```
 
@@ -108,7 +104,7 @@ sudo apt install openssh-server
 On a client device, run
 
 ```bash
-***eval `ssh-agent`***
+eval `ssh-agent`
 ssh-keygen -t ed25519-sk -C <your email address>
 ```
 
@@ -130,10 +126,8 @@ nano ~/.ssh/authorized_keys
 
 Run the following command to open up the SSH server configuration file.
 
-```bash
-#***Server:***
-sudo nano /etc/ssh/sshd_config
-```
+<pre class="language-bash"><code class="lang-bash"><strong>sudo nano /etc/ssh/sshd_config
+</strong></code></pre>
 
 1. Uncomment `#AuthorizedKeysFile` if it is commented (by removing the `#` in front of it)
 2. Change `KbdInteractiveAuthentication yes` to `KbdInteractiveAuthentication no` and uncomment (by removing the `#` in front of it) - **note that older versions of SSH call this option `ChallengeResponseAuthentication` instead of `KbdInteractiveAuthentication`**

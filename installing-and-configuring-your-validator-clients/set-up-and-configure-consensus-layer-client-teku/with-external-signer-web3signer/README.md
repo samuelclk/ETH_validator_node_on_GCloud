@@ -75,20 +75,27 @@ ExecStart=/usr/local/bin/teku/bin/teku \
   --ee-jwt-secret-file=/var/lib/jwtsecret/jwt.hex \
   --initial-state=https://beaconstate.ethstaker.cc \
   --metrics-enabled=true \
-  --builder-endpoint=http://127.0.0.1:18550 \
   --rest-api-enabled=true \
-  --rest-api-docs-enabled=true \
+  --builder-endpoint=http://127.0.0.1:18550 \
   --validators-builder-registration-default-enabled=true 
-
+  
 [Install]
 WantedBy=multi-user.target
 ```
 
-Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Understand and review your configuration summary below, and amend if needed.
+Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Understand and review your configuration (flags) summary below, and amend if needed.
 
-**Teku Beacon Node configuration summary (WIP):**
+**Teku Beacon Node configuration summary:**
 
-`--initial-state` enables nearly instant syncing of the beacon node by pointing to one of the checkpoint sync URLs here - [https://eth-clients.github.io/checkpoint-sync-endpoints/](https://eth-clients.github.io/checkpoint-sync-endpoints/)
+1. `--network`: Run the beacon node service on the ETH mainnet
+2. `--data-path`: Specify the directory for Teku to store the blockchain data for the consensus layer
+3. `--ee-endpoint`: URL to connect to the execution layer client
+4. `--ee-jwt-secret`: File path to locate the JWT secret we generated earlier
+5. `--initial-state`: Enables nearly instant syncing of the beacon node by pointing to one of the checkpoint sync URLs here - [https://eth-clients.github.io/checkpoint-sync-endpoints/](https://eth-clients.github.io/checkpoint-sync-endpoints/)
+6. `--metrics-enabled`: Enable monitoring of beacon node metrics
+7. `--rest-api-enabled`: Allows the validator client to connect to this beacon node. Also allows monitoring endpoints to pull metrics from this service
+8. `--builder-endpoint`: URL to connect to external builders (e.g. MEV relays)
+9. `--validators-builder-registration-default-enabled`: Required when using external builders to build blocks (e.g. MEV relays)
 
 ### Start the Teku beacon node service
 
@@ -125,7 +132,7 @@ sudo systemctl enable tekubeacon.service
 ### Verify the Initial State roots (Checkpoint Sync)
 
 1. Go to [beaconcha.in](https://beaconcha.in/) on your browser and search for the slot number (`slot`).&#x20;
-2.  &#x20;Verify the `Block Root` and `State Roo`t with your `journalctl` output
+2.  &#x20;Verify the `Block Root` and `State Root` with your `journalctl` output
 
     <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>testnet example: prater.beaconcha.in</p></figcaption></figure>
 
@@ -156,20 +163,31 @@ ExecStart=/usr/local/bin/teku/bin/teku vc \
   --data-path=/var/lib/teku \
   --validators-external-signer-public-keys=&#x3C;validator pubkeys> \
   --validators-external-signer-url=https://<a data-footnote-ref href="#user-content-fn-1">&#x3C;external_signer_IP_address></a> \
+  --beacon-node-api-endpoint=http://localhost:5051,http://&#x3C;backup_beacon_node>:&#x3C;http/rest_port_number> \
   --validators-proposer-default-fee-recipient=&#x3C;designated wallet address> \
   --validators-proposer-blinded-blocks-enabled=true\
   --validators-graffiti="&#x3C;yourgraffiti>" \
   --metrics-enabled=true \
-  --doppelganger-detection-enabled=true \
-#  --rest-api-enabled=true
-
+  --doppelganger-detection-enabled=true 
+  
 [Install]
 WantedBy=multi-user.target
 </code></pre>
 
 Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Understand and review your configuration summary below, and amend if needed.
 
-**Teku Validator Client configuration summary (WIP):**
+**Teku Validator Client configuration summary:**
+
+1. `--network`: Run the validator client service on the ETH mainnet
+2. `--data-path`: Specify the directory for Teku to store the validator info
+3. `--validators-external-signer-public-keys`: Public keys of the validators set up for remote signing
+4. `--validators-external-signer-url`: URL to connect to the external signer
+5. `--beacon-node-api-endpoint`: URLs to connect to the main and backup beacon nodes
+6. `--validators-proposer-default-fee-recipient`: ETH wallet address to receive rewards from block proposals and MEV bribes
+7. `--validators-proposer-blinded-blocks-enabled`: Required when using external builders to build blocks (e.g. MEV relays)
+8. `--validators-graffiti`: Optional text to display on-chain when your validator proposes a block
+9. `--metrics-enabled`: Enable monitoring of beacon node metrics
+10. `--doppelganger-detection-enabled`: Helps prevents slashing due to double signing by checking if your validator keys are already active on the network. _**Not a fool-proof solution.**_
 
 ### Start the Teku Validator Client service
 
