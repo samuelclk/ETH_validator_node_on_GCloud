@@ -62,7 +62,7 @@ sudo sysctl vm.vfs_cache_pressure=50
 sudo nano /etc/sysctl.conf
 ```
 
-Add the following to the end of the config file:
+Add the following to the end of the configuration file:
 
 ```bash
 vm.swappiness=10
@@ -75,6 +75,8 @@ Check your new swap space with the following commands.
 htop
 free -h
 ```
+
+_**Expected output:**_
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p><code>htop</code></p></figcaption></figure>
 
