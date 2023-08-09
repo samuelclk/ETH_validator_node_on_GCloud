@@ -1,24 +1,28 @@
 # Set up and configure consensus layer software (Teku)
 
-#### Install the dependencies - Java Runtime Environment
+### Install the dependencies - Java Runtime Environment
 
 ```bash
 sudo apt install -y default-jre
 ```
 
-#### Install the consensus layer software
+### Install the consensus layer software
 
 [Download](https://github.com/ConsenSys/teku/releases) the latest version of Teku and run the checksum verification process to ensure that the downloaded file has not been tampered with.
 
 ```bash
 cd
-curl -LO <https://artifacts.consensys.net/public/teku/raw/names/teku.tar.gz/versions/23.6.2/teku-23.6.2.tar.gz>
+curl -LO https://artifacts.consensys.net/public/teku/raw/names/teku.tar.gz/versions/23.6.2/teku-23.6.2.tar.gz
 echo "c0b021ead22a514fdb8d5e2ce072549dc447dfdeed660eccef0e3a42890e56c2 teku-23.6.2.tar.gz" | sha256sum --check
 ```
 
-Verify output of the checksum verification:
+_**Expected output:** Verify output of the checksum verification._
 
-If checksum is verified, extract the files and move them into the \*\*\*\*`(/usr/local/bin)` directory for neatness and best practice. Then, clean up the duplicated copies.
+```
+teku-23.6.2.tar.gz: OK
+```
+
+If checksum is verified, extract the files and move them into the `(/usr/local/bin)` directory for neatness and best practice. Then, clean up the duplicated copies.
 
 ```bash
 tar xvf teku-23.6.2.tar.gz
@@ -26,21 +30,21 @@ sudo cp -a teku-23.6.2 /usr/local/bin/teku
 rm -r teku-23.6.2.tar.gz teku-23.6.2
 ```
 
-#### Configure the beacon node service
+### Configure the beacon node service
 
 _**Note:**_ _We will be running the Beacon Node and Validator client of Teku as separate services so that we can configure a failover node for maximum uptime._
 
-Create an account (`tekubeacon`) without server access for the Teku Beacon Node to run as a background service. This restricts potential attackers to only the Teku Beacon Node service in the unlikely event that they manage to infiltrate via a compromised client update.
+Create an account (`teku`) without server access for the Teku Beacon Node & Validator Client to run as a background service. This restricts potential attackers to only the Teku Beacon Node & Validator Client services in the unlikely event that they manage to infiltrate via a compromised client update.
 
 ```bash
-sudo useradd --no-create-home --shell /bin/false tekubeacon
+sudo useradd --no-create-home --shell /bin/false teku
 ```
 
-Create a directory for Teku to store the blockchain data of the Consensus layer. Then set the owner of this directory to the `tekubeacon` so that this user can read and write to the directory.
+Create a directory for Teku to store the blockchain and validator data of the Consensus layer. Then set the owner of this directory to the `teku` so that this user can read and write to the directory.
 
 ```bash
-sudo mkdir -p /var/lib/teku/beacon
-sudo chown -R tekubeacon:tekubeacon /var/lib/teku/beacon
+sudo mkdir -p /var/lib/teku
+sudo chown -R teku:teku /var/lib/teku
 ```
 
 Create a systemd configuration file for the Teku Beacon Node service to run in the background.
@@ -57,8 +61,8 @@ Description=Teku Beacon Node (Mainnet)
 Wants=network-online.target
 After=network-online.target
 [Service]
-User=tekubeacon
-Group=tekubeacon
+User=teku
+Group=teku
 Type=simple
 Restart=always
 RestartSec=5
@@ -86,7 +90,7 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 
 `--initial-state` enables nearly instant syncing of the beacon node by pointing to one of the checkpoint sync URLs here - [https://eth-clients.github.io/checkpoint-sync-endpoints/](https://eth-clients.github.io/checkpoint-sync-endpoints/)
 
-#### Start the Teku beacon node service
+### Start the Teku beacon node service
 
 Reload systemd to register the changes made, start the Teku Beacon Node service, and check its status to make sure its running.
 
@@ -96,13 +100,19 @@ sudo systemctl start tekubeacon.service
 sudo systemctl status tekubeacon.service
 ```
 
-The output should say Teku Beacon Node is **“active (running)”.** Press CTRL-C to exit and Teku Beacon Node will continue to run. It should take just a few minutes for Teku to sync on the Mainnet.
+**Expected output:** The output should say Teku Beacon Node is **“active (running)”.** Press CTRL-C to exit and Teku Beacon Node will continue to run. It should take just a few minutes for Teku to sync on the Mainnet.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>sudo systemctl status tekubeacon.service</p></figcaption></figure>
 
 Use the following command to check the logs of Teku Beacon Node’s syncing process. Watch out for any warnings or errors.
 
 ```bash
-sudo journalctl -fu teku
+sudo journalctl -fu tekubeacon -o cat | ccze -A
 ```
+
+**Expected output:**&#x20;
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>This example runs on the goerli testnet. You should see a different initial state URL being printed on the mainnet.</p></figcaption></figure>
 
 Press `Ctrl+C` to exit monitoring.
 
@@ -112,20 +122,14 @@ If the Teku Beacon Node service is running smoothly, we can now enable it to fir
 sudo systemctl enable tekubeacon.service
 ```
 
-#### Configure the validator client service
+### Verify the Initial State roots (Checkpoint Sync)
 
-Create an account (`tekuvalidator`) without server access for the Teku Validator Client to run as a background service. This restricts potential attackers to only the Teku Validator Client service in the unlikely event that they manage to infiltrate via a compromised client update.
+1. Go to [beaconcha.in](https://beaconcha.in/) on your browser and search for the slot number (`slot`).&#x20;
+2.  &#x20;Verify the `Block Root` and `State Roo`t with your `journalctl` output
 
-```bash
-sudo useradd --no-create-home --shell /bin/false tekuvalidator
-```
+    <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>testnet example: prater.beaconcha.in</p></figcaption></figure>
 
-Create a directory for Teku to store the blockchain data of the Consensus layer. Then set the owner of this directory to the `tekuvalidator` so that this user can read and write to the directory.
-
-```bash
-sudo mkdir -p /var/lib/teku/validator
-sudo chown -R tekuvalidator:tekuvalidator /var/lib/teku/validator
-```
+### Configure the validator client service
 
 Create a systemd configuration file for the Teku Validator Client service to run in the background.
 
@@ -158,8 +162,7 @@ ExecStart=/usr/local/bin/teku/bin/teku vc \
   --validators-graffiti="<yourgraffiti>" \
   --metrics-enabled=true \
   --doppelganger-detection-enabled=true \
-  --rest-api-enabled=true \
-  --rest-api-docs-enabled=true
+#  --rest-api-enabled=true
 
 [Install]
 WantedBy=multi-user.target
@@ -169,7 +172,7 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 
 **Teku Validator Client configuration summary (WIP):**
 
-#### Start the Teku Validator Client service
+### Start the Teku Validator Client service
 
 Reload the systemd daemon to register the changes made, start the Teku Validator Client, and check its status to make sure its running.
 
@@ -187,10 +190,20 @@ Use the following command to check the logs for any warnings or errors:
 sudo journalctl -fu tekuvalidator -o cat | ccze -A
 ```
 
+**Expected output:**
+
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
 Press `CTRL-C` to exit.
 
 If the Teku Validator Client service is running smoothly, we can now enable it to fire up automatically when rebooting the system.
 
 ```bash
 sudo systemctl enable tekuvalidator
+```
+
+**Expected output:**
+
+```
+Created symlink /etc/systemd/system/multi-user.target.wants/tekuvalidator.service → /etc/systemd/system/tekuvalidator.service.
 ```

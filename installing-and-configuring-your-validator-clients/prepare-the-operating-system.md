@@ -78,7 +78,7 @@ free -h
 
 _**Expected output:**_
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><code>htop</code></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p><code>htop</code></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p><code>free -h</code></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><code>free -h</code></p></figcaption></figure>
 

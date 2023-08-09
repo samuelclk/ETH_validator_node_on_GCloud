@@ -1,6 +1,6 @@
 # Set up and configure execution layer software (Nethermind)
 
-#### Generate the JWT file
+### Generate the JWT file
 
 We first need to create a JSON Web Token (JWT) that will allow the execution layer software (Nethermind) and the consensus layer software (Teku) to talk to each other.
 
@@ -13,14 +13,14 @@ openssl rand -hex 32 | sudo tee /var/lib/jwtsecret/jwt.hex > /dev/null
 
 We will be pointing the configuration files of the Nethermind and Teku software to this JWT file later.
 
-#### Install dependencies - Unzip, Snappy & the GNU C Library
+### Install dependencies - Unzip, Snappy & the GNU C Library
 
 ```bash
 sudo apt-get update
 sudo apt-get install unzip libsnappy-dev libc6-dev libc6 -y
 ```
 
-#### Install and configure the execution layer software
+### Install and configure the execution layer software
 
 [Download](https://downloads.nethermind.io/) the latest version of Nethermind and run the checksum verification process to ensure that the downloaded file has not been tampered with.
 
@@ -98,7 +98,7 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 
 `--config mainnet --datadir /var/lib/nethermind --JsonRpc.JwtSecretFile /var/lib/jwtsecret/jwt.hex --Sync.SnapSync true --Sync.AncientBodiesBarrier 11052984 --Sync.AncientReceiptsBarrier 11052984`
 
-#### Start Nethermind
+### Start Nethermind
 
 Reload the systemd daemon to register the changes made, start Nethermind, and check its status to make sure its running.
 
@@ -110,7 +110,7 @@ sudo systemctl status nethermind.service
 
 **Expected output:** The output should say Nethermind is **“active (running)”.** Press CTRL-C to exit and Nethermind will continue to run. It should take 48 - 72 hours for Nethermind to sync on the Mainnet.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>sudo systemctl status nethermind.service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>sudo systemctl status nethermind.service</p></figcaption></figure>
 
 Use the following command to check the logs of Nethermind’s syncing process. Watch out for any warnings or errors.
 
@@ -121,7 +121,7 @@ sudo journalctl -fu nethermind -o cat | ccze -A
 
 **Expected output:**
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>sudo journalctl -fu nethermind -o cat | ccze -A</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>sudo journalctl -fu nethermind -o cat | ccze -A</p></figcaption></figure>
 
 Press `CTRL-C` to exit.
 
