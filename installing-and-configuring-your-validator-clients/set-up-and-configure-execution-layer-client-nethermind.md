@@ -1,4 +1,4 @@
-# Set up and configure execution layer software (Nethermind)
+# Set up and configure execution layer client (Nethermind)
 
 ### Generate the JWT file
 
@@ -20,7 +20,7 @@ sudo apt-get update
 sudo apt-get install unzip libsnappy-dev libc6-dev libc6 -y
 ```
 
-### Install and configure the execution layer software
+### Install Nethermind and configure the service
 
 [Download](https://downloads.nethermind.io/) the latest version of Nethermind and run the checksum verification process to ensure that the downloaded file has not been tampered with.
 

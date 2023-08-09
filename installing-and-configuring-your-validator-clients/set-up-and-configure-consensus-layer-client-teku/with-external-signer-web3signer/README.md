@@ -6,7 +6,7 @@
 sudo apt install -y default-jre
 ```
 
-### Install the consensus layer software
+### Install Teku
 
 [Download](https://github.com/ConsenSys/teku/releases) the latest version of Teku and run the checksum verification process to ensure that the downloaded file has not been tampered with.
 
