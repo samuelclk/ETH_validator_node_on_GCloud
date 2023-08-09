@@ -18,7 +18,7 @@ timedatectl
 
 And check that NTP service is “active”. See screenshot below.
 
-<figure><img src="../../.gitbook/assets/Untitled (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Untitled (6).png" alt=""><figcaption></figcaption></figure>
 
 If not, turn it on by running:
 
@@ -76,7 +76,7 @@ htop
 free -h
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p><code>htop</code></p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p><code>htop</code></p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><code>free -h</code></p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><code>free -h</code></p></figcaption></figure>
 

@@ -1,4 +1,4 @@
-# Set up and configure consensus layer software (Teku)
+# With external signer (Web3signer)
 
 ### Install the dependencies - Java Runtime Environment
 
@@ -102,7 +102,7 @@ sudo systemctl status tekubeacon.service
 
 **Expected output:** The output should say Teku Beacon Node is **“active (running)”.** Press CTRL-C to exit and Teku Beacon Node will continue to run. It should take just a few minutes for Teku to sync on the Mainnet.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>sudo systemctl status tekubeacon.service</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>sudo systemctl status tekubeacon.service</p></figcaption></figure>
 
 Use the following command to check the logs of Teku Beacon Node’s syncing process. Watch out for any warnings or errors.
 
@@ -112,7 +112,7 @@ sudo journalctl -fu tekubeacon -o cat | ccze -A
 
 **Expected output:**&#x20;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>This example runs on the goerli testnet. You should see a different initial state URL being printed on the mainnet.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>This example runs on the goerli testnet. You should see a different initial state URL being printed on the mainnet.</p></figcaption></figure>
 
 Press `Ctrl+C` to exit monitoring.
 
@@ -127,7 +127,7 @@ sudo systemctl enable tekubeacon.service
 1. Go to [beaconcha.in](https://beaconcha.in/) on your browser and search for the slot number (`slot`).&#x20;
 2.  &#x20;Verify the `Block Root` and `State Roo`t with your `journalctl` output
 
-    <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>testnet example: prater.beaconcha.in</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>testnet example: prater.beaconcha.in</p></figcaption></figure>
 
 ### Configure the validator client service
 
@@ -139,8 +139,7 @@ sudo nano /etc/systemd/system/tekuvalidator.service
 
 Paste the configuration parameters below into the file:
 
-```bash
-[Unit]
+<pre class="language-bash"><code class="lang-bash">[Unit]
 Description=Teku Validator Client (Mainnet)
 Wants=network-online.target
 After=network-online.target
@@ -155,18 +154,18 @@ Environment="TEKU_OPTS=-XX:-HeapDumpOnOutOfMemoryError"
 ExecStart=/usr/local/bin/teku/bin/teku vc \
   --network=mainnet \
   --data-path=/var/lib/teku \
-  --validators-external-signer-public-keys=<validator pubkeys> \
-  --validators-external-signer-url=https://10.0.0.10:9000 \
-  --validators-proposer-default-fee-recipient=<designated wallet address> \
+  --validators-external-signer-public-keys=&#x3C;validator pubkeys> \
+  --validators-external-signer-url=https://<a data-footnote-ref href="#user-content-fn-1">&#x3C;external_signer_IP_address></a> \
+  --validators-proposer-default-fee-recipient=&#x3C;designated wallet address> \
   --validators-proposer-blinded-blocks-enabled=true\
-  --validators-graffiti="<yourgraffiti>" \
+  --validators-graffiti="&#x3C;yourgraffiti>" \
   --metrics-enabled=true \
   --doppelganger-detection-enabled=true \
 #  --rest-api-enabled=true
 
 [Install]
 WantedBy=multi-user.target
-```
+</code></pre>
 
 Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Understand and review your configuration summary below, and amend if needed.
 
@@ -192,7 +191,7 @@ sudo journalctl -fu tekuvalidator -o cat | ccze -A
 
 **Expected output:**
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Press `CTRL-C` to exit.
 
@@ -207,3 +206,5 @@ sudo systemctl enable tekuvalidator
 ```
 Created symlink /etc/systemd/system/multi-user.target.wants/tekuvalidator.service → /etc/systemd/system/tekuvalidator.service.
 ```
+
+[^1]: 
