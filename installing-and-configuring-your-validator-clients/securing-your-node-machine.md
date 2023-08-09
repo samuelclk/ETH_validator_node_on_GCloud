@@ -47,6 +47,8 @@ mkdir -p ~/.ssh
 nano ~/.ssh/authorized_keys
 ```
 
+### Modify the SSH port and disable remote password login
+
 Make it harder for attackers to access your node by switching your SSH port away from the default port 22.
 
 Pick a port number between 1024–49151 and check that it is not already in use by running
@@ -57,7 +59,7 @@ sudo ss -tulpn | grep <Chosen_SSH_Port_Number>
 
 If there is no output, it means that your chosen port is free to use.
 
-#### Next, we will change your SSH port number and disable remote password login  concurrently
+#### Next, we will change your SSH port number and disable remote password login concurrently
 
 Run the following command to open up the SSH server configuration file.
 

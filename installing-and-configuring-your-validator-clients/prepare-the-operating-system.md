@@ -1,6 +1,6 @@
 # Prepare the operating system
 
-#### Update your server
+### Update your server
 
 Now that we have provisioned the hardware and accompanying Ubuntu operating system for your server, the first thing we will do to prepare your server is to run an OS update by entering in your command line:
 
@@ -8,7 +8,7 @@ Now that we have provisioned the hardware and accompanying Ubuntu operating syst
 sudo apt update -y && sudo apt upgrade -y
 ```
 
-#### Configure timekeeping
+### Configure timekeeping
 
 We need to make sure the time on our device is the same with all other nodes so that we are able to sync with everyone else. If our timekeeping is off, we will start missing attestations (and rewards!). Verify this by running:
 
@@ -26,7 +26,7 @@ If not, turn it on by running:
 sudo timedatectl set-ntp on
 ```
 
-#### **Create a Swap Space**
+### **Create a Swap Space**
 
 A swap space _(”back-up” memory space carved out from disk space)_ is used to prevent out-of-memory errors.
 
