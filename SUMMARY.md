@@ -42,9 +42,11 @@
 ## Monitoring, updates, and troubleshooting
 
 * [Overview](monitoring-updates-and-troubleshooting/overview.md)
-* [Installing & configuring Prometheus](monitoring-updates-and-troubleshooting/installing-and-configuring-prometheus.md)
-* [Installing & configuring Node Exporter](monitoring-updates-and-troubleshooting/installing-and-configuring-node-exporter.md)
-* [Installing & configuring Grafana](monitoring-updates-and-troubleshooting/installing-and-configuring-grafana.md)
+* [Updating your clients](monitoring-updates-and-troubleshooting/updating-your-clients.md)
+* [Set up monitoring suite](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/README.md)
+  * [Installing & configuring Prometheus](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-prometheus.md)
+  * [Installing & configuring Node Exporter](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-node-exporter.md)
+  * [Installing & configuring Grafana](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-grafana.md)
 
 ## Best practices for maximising security and uptime
 
