@@ -27,11 +27,11 @@
 * [Securing your node machine](installing-and-configuring-your-validator-clients/securing-your-node-machine.md)
 * [Set up and configure execution layer client (Nethermind)](installing-and-configuring-your-validator-clients/set-up-and-configure-execution-layer-client-nethermind.md)
 * [Set up and configure consensus layer client (Teku)](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/README.md)
-  * [Without external signer (Web3signer)](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/without-external-signer-web3signer.md)
+  * [Without external signer](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/without-external-signer.md)
   * [With external signer (Web3signer)](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/with-external-signer-web3signer/README.md)
     * [Setup and configure an external signer](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/with-external-signer-web3signer/setup-and-configure-an-external-signer/README.md)
       * [Prepare the operating system](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/with-external-signer-web3signer/setup-and-configure-an-external-signer/prepare-the-operating-system.md)
-      * [Secure the Signer machine](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/with-external-signer-web3signer/setup-and-configure-an-external-signer/secure-the-signer-machine.md)
+      * [Secure the Signer server](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/with-external-signer-web3signer/setup-and-configure-an-external-signer/secure-the-signer-server.md)
       * [Install and configure PostgreSQL and Web3signer](installing-and-configuring-your-validator-clients/set-up-and-configure-consensus-layer-client-teku/with-external-signer-web3signer/setup-and-configure-an-external-signer/install-and-configure-postgresql-and-web3signer.md)
 * [Set up and configure MEV-boost](installing-and-configuring-your-validator-clients/set-up-and-configure-mev-boost.md)
 
