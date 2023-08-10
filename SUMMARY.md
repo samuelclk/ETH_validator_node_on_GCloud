@@ -3,12 +3,6 @@
 * [Welcome!](README.md)
 * [Quick Start](quick-start.md)
 
-## Reference
-
-* [API Reference](reference/api-reference/README.md)
-  * [Pets](reference/api-reference/pets.md)
-  * [Users](reference/api-reference/users.md)
-
 ## Roles & responsibilities of validators&#x20;
 
 * [Page 1](roles-and-responsibilities-of-validators/page-1.md)
@@ -42,11 +36,15 @@
 ## Monitoring, updates, and troubleshooting
 
 * [Overview](monitoring-updates-and-troubleshooting/overview.md)
-* [Updating your clients](monitoring-updates-and-troubleshooting/updating-your-clients.md)
 * [Set up monitoring suite](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/README.md)
   * [Installing & configuring Prometheus](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-prometheus.md)
   * [Installing & configuring Node Exporter](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-node-exporter.md)
   * [Installing & configuring Grafana](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-grafana.md)
+* [Updating your clients](monitoring-updates-and-troubleshooting/updating-your-clients/README.md)
+  * [Updating Nethermind](monitoring-updates-and-troubleshooting/updating-your-clients/updating-nethermind.md)
+  * [Updating Teku](monitoring-updates-and-troubleshooting/updating-your-clients/updating-teku.md)
+  * [Updating Web3signer](monitoring-updates-and-troubleshooting/updating-your-clients/updating-web3signer.md)
+  * [Updating the monitoring suite](monitoring-updates-and-troubleshooting/updating-your-clients/updating-the-monitoring-suite.md)
 
 ## Best practices for maximising security and uptime
 
