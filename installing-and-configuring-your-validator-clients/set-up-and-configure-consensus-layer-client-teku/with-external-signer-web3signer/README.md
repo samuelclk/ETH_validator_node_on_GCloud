@@ -162,7 +162,7 @@ ExecStart=/usr/local/bin/teku/bin/teku vc \
   --network=mainnet \
   --data-path=/var/lib/teku \
   --validators-external-signer-public-keys=&#x3C;validator pubkeys> \
-  --validators-external-signer-url=https://<a data-footnote-ref href="#user-content-fn-1">&#x3C;external_signer_IP_address></a> \
+  --validators-external-signer-url=http://<a data-footnote-ref href="#user-content-fn-1">&#x3C;external_signer_IP_address></a> \
   --beacon-node-api-endpoint=http://localhost:5051,http://&#x3C;backup_beacon_node>:&#x3C;http/rest_port_number> \
   --validators-proposer-default-fee-recipient=&#x3C;designated wallet address> \
   --validators-proposer-blinded-blocks-enabled=true\
@@ -181,7 +181,7 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 1. `--network`: Run the validator client service on the ETH mainnet
 2. `--data-path`: Specify the directory for Teku to store the validator info
 3. `--validators-external-signer-public-keys`: Public keys of the validators set up for remote signing
-4. `--validators-external-signer-url`: URL to connect to the external signer
+4. `--validators-external-signer-url`: URL to connect to the external signer. We don't need to configure TLS (i.e. using 'https') here as the external signer will be sitting in our own secure virtual private cloud (VPC) with strict firewall rules so that only the designated VC can 'talk' to it
 5. `--beacon-node-api-endpoint`: URLs to connect to the main and backup beacon nodes
 6. `--validators-proposer-default-fee-recipient`: ETH wallet address to receive rewards from block proposals and MEV bribes
 7. `--validators-proposer-blinded-blocks-enabled`: Required when using external builders to build blocks (e.g. MEV relays)
