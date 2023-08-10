@@ -94,7 +94,14 @@ WantedBy=default.target
 
 Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Understand and review your configuration summary below, and amend if needed.
 
-**Nethermind configuration summary (WIP):**
+**Nethermind configuration summary:**
+
+1. `--config`: Run the on the mainnnet
+2. `--datadir`: The directory for Nethermind to store the blockchain data of the execution layer
+3. `--JsonRpc.JwtSecretFile`: The directory pointing to the JWT secret we generated earlier
+4. `--Sync.SnapSync`: Use Nethermind's snap sync feature. More information [here](https://docs.nethermind.io/nethermind/ethereum-client/sync-modes)
+5. `--Sync.AncientBodiesBarrier`: Prunes blocks before the [block](https://github.com/eth-clients/eth2-networks/blob/master/shared/mainnet/deposit\_contract\_block.txt) when the deposit contract became active.
+6. `--Metrics.Enabled`: Enable monitoring metrics on the Nethermind service
 
 `--config mainnet --datadir /var/lib/nethermind --JsonRpc.JwtSecretFile /var/lib/jwtsecret/jwt.hex --Sync.SnapSync true --Sync.AncientBodiesBarrier 11052984 --Sync.AncientReceiptsBarrier 11052984`
 
