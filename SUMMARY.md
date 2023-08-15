@@ -31,7 +31,9 @@
 
 ## Acquiring 32 ETH, key generation, and validator deposit
 
-* [Validator key generation](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation.md)
+* [Validator key generation](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation/README.md)
+  * [Method 2: OS-on-a-stick](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation/method-2-os-on-a-stick.md)
+  * [Method 3: "Throwaway" VM](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation/method-3-throwaway-vm.md)
 * [Acquiring 32 ETH](acquiring-32-eth-key-generation-and-validator-deposit/acquiring-32-eth.md)
 
 ## Monitoring, updates, and troubleshooting
