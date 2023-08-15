@@ -31,7 +31,8 @@
 
 ## Acquiring 32 ETH, key generation, and validator deposit
 
-* [Page 5](acquiring-32-eth-key-generation-and-validator-deposit/page-5.md)
+* [Validator key generation](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation.md)
+* [Acquiring 32 ETH](acquiring-32-eth-key-generation-and-validator-deposit/acquiring-32-eth.md)
 
 ## Monitoring, updates, and troubleshooting
 

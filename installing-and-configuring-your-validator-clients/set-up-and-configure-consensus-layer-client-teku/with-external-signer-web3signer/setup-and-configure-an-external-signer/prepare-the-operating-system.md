@@ -2,7 +2,7 @@
 
 ### Update your server
 
-Now that we have provisioned the hardware and accompanying Ubuntu operating system for your server, the first thing we will do to prepare your server is to run an OS update by entering in your command line:
+Now that we have provisioned the hardware and accompanying Ubuntu operating system for your external signer, the first thing we will do is to run an OS update by entering in your command line:
 
 ```bash
 sudo apt update -y && sudo apt upgrade -y
