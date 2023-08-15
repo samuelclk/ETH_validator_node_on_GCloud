@@ -1,4 +1,4 @@
-# Acquiring 32 ETH
+# Acquiring 32 ETH (or more)
 
 * If you are going from fiat (e.g. USD, SGD, MYR) to crypto, you will need to use an on-ramp platform. It should not matter too much which platform you decide to use as long as they are reputable and regulated (in your own region). This is because you will be transferring your ETH out as soon as you have bought them.
 

@@ -23,11 +23,11 @@
 
 4\) Once you see the boot menu, select the option to boot up from your USB drive instead of your usual storage volume and you should see the following screen.
 
-<figure><img src="../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 5\) Select `*Try or Install Ubuntu` and then `Try Ubuntu` when you get to the next screen
 
-<figure><img src="../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Building the validator key generation tool from source
 
@@ -64,7 +64,7 @@ pip3 install -r requirements.txt
 
 **Expected output:** You should see some progress bars after a few seconds.
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 ### \*BEFORE PROCEEDING TO THE NEXT STEP
 
@@ -89,13 +89,13 @@ You will be prompted to key in the following. Select accordingly.
 
 **Expected output:**
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 Next, your mnemonic word list will be generated. Write it down on a piece of paper or notebook  -\***Never store this online or on any device that is connected to the internet**.
 
 &#x20;**Expected output:**
 
-<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 Press any key once you have written your mnemonic down and the tool will prompt you to key in your mnemonic in the same order to verify that you have recorded it correctly.
 
@@ -103,7 +103,7 @@ If you typed in your mnemonic correctly, you will be greeted by an ASCII art of 
 
 **Expected output:**
 
-<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 **There will be 2 files generated.**&#x20;
 

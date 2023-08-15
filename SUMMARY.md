@@ -9,7 +9,7 @@
 
 ## Hardware & software requirements
 
-* [Preparing your virtual machine](hardware-and-software-requirements/preparing-your-virtual-machine.md)
+* [Preparing your virtual machine](hardware-and-software-requirements/page-2.md)
 
 ## Choosing your validator clients
 
@@ -31,8 +31,8 @@
 
 ## Acquiring 32 ETH, key generation, and validator deposit
 
-* [Validator key generation](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation.md)
-* [Acquiring 32 ETH (or more)](acquiring-32-eth-key-generation-and-validator-deposit/acquiring-32-eth-or-more.md)
+* [Validator key generation](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation/README.md)
+* [Acquiring 32 ETH (or more)](acquiring-32-eth-key-generation-and-validator-deposit/acquiring-32-eth.md)
 * [Depositing ETH into your validator](acquiring-32-eth-key-generation-and-validator-deposit/depositing-eth-into-your-validator.md)
 
 ## Monitoring, updates, and troubleshooting
@@ -42,6 +42,7 @@
   * [Installing & configuring Prometheus](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-prometheus.md)
   * [Installing & configuring Node Exporter](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-node-exporter.md)
   * [Installing & configuring Grafana](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-grafana.md)
+  * [Google Uptime Check](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/google-uptime-check.md)
 * [Updating your clients](monitoring-updates-and-troubleshooting/updating-your-clients/README.md)
   * [Updating Nethermind](monitoring-updates-and-troubleshooting/updating-your-clients/updating-nethermind.md)
   * [Updating Teku](monitoring-updates-and-troubleshooting/updating-your-clients/updating-teku.md)
