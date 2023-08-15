@@ -9,7 +9,7 @@
 
 ## Hardware & software requirements
 
-* [Page 2](hardware-and-software-requirements/page-2.md)
+* [Preparing your virtual machine](hardware-and-software-requirements/preparing-your-virtual-machine.md)
 
 ## Choosing your validator clients
 
@@ -31,10 +31,9 @@
 
 ## Acquiring 32 ETH, key generation, and validator deposit
 
-* [Validator key generation](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation/README.md)
-  * [Method 2: OS-on-a-stick](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation/method-2-os-on-a-stick.md)
-  * [Method 3: "Throwaway" VM](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation/method-3-throwaway-vm.md)
-* [Acquiring 32 ETH](acquiring-32-eth-key-generation-and-validator-deposit/acquiring-32-eth.md)
+* [Validator key generation](acquiring-32-eth-key-generation-and-validator-deposit/validator-key-generation.md)
+* [Acquiring 32 ETH (or more)](acquiring-32-eth-key-generation-and-validator-deposit/acquiring-32-eth-or-more.md)
+* [Depositing ETH into your validator](acquiring-32-eth-key-generation-and-validator-deposit/depositing-eth-into-your-validator.md)
 
 ## Monitoring, updates, and troubleshooting
 

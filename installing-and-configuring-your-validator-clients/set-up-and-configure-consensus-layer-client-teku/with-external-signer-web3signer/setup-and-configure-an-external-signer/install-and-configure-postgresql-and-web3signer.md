@@ -190,7 +190,7 @@ sudo systemctl status web3signer.service
 
 **Expected output:** The output should say that Web3signer is **“active (running)”.**
 
-<figure><img src="../../../../.gitbook/assets/image (12).png" alt=""><figcaption><p>sudo systemctl status web3signer.service</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>sudo systemctl status web3signer.service</p></figcaption></figure>
 
 Press `Ctrl+C` to exit monitoring.
 
@@ -202,7 +202,7 @@ sudo journalctl -fu web3signer -o cat | ccze -A
 
 **Expected output:** Check that all validator signing keystores are loaded successfully and that web3signer is and ready to handle signing requests on `<Signer_internal_IP>:9000` .
 
-<figure><img src="../../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 Press `Ctrl+C` to exit monitoring.
 

@@ -117,7 +117,7 @@ sudo systemctl status nethermind.service
 
 **Expected output:** The output should say Nethermind is **“active (running)”.** Press CTRL-C to exit and Nethermind will continue to run. It should take 48 - 72 hours for Nethermind to sync on the Mainnet.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>sudo systemctl status nethermind.service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>sudo systemctl status nethermind.service</p></figcaption></figure>
 
 Use the following command to check the logs of Nethermind’s syncing process. Watch out for any warnings or errors.
 
@@ -128,7 +128,7 @@ sudo journalctl -fu nethermind -o cat | ccze -A
 
 **Expected output:**
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>sudo journalctl -fu nethermind -o cat | ccze -A</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>sudo journalctl -fu nethermind -o cat | ccze -A</p></figcaption></figure>
 
 Press `CTRL-C` to exit.
 

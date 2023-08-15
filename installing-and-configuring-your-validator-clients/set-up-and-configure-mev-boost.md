@@ -85,7 +85,7 @@ sudo systemctl status mevboost.service
 
 **Expected output:** The output should say MEV Boost is **“active (running)”.** Press CTRL-C to exit and MEV Boost will continue to run.
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>sudo systemctl status mevboost.service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>sudo systemctl status mevboost.service</p></figcaption></figure>
 
 Use the following command to check the logs for any warnings or errors:
 
@@ -95,7 +95,7 @@ sudo journalctl -fu mevboost -o cat | ccze -A
 
 **Expected output:**
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 Press `CTRL-C` to exit.
 

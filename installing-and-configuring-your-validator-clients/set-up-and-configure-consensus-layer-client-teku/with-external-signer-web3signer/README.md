@@ -109,7 +109,7 @@ sudo systemctl status tekubeacon.service
 
 **Expected output:** The output should say Teku Beacon Node is **“active (running)”.** Press CTRL-C to exit and Teku Beacon Node will continue to run. It should take just a few minutes for Teku to sync on the Mainnet.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>sudo systemctl status tekubeacon.service</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>sudo systemctl status tekubeacon.service</p></figcaption></figure>
 
 Use the following command to check the logs of Teku Beacon Node’s syncing process. Watch out for any warnings or errors.
 
@@ -119,7 +119,7 @@ sudo journalctl -fu tekubeacon -o cat | ccze -A
 
 **Expected output:**&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>This example runs on the goerli testnet. You should see a different initial state URL being printed on the mainnet.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>This example runs on the goerli testnet. You should see a different initial state URL being printed on the mainnet.</p></figcaption></figure>
 
 Press `Ctrl+C` to exit monitoring.
 
@@ -134,7 +134,7 @@ sudo systemctl enable tekubeacon.service
 1. Go to [beaconcha.in](https://beaconcha.in/) on your browser and search for the slot number (`slot`).&#x20;
 2.  &#x20;Verify the `Block Root` and `State Root` with your `journalctl` output
 
-    <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>testnet example: prater.beaconcha.in</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>testnet example: prater.beaconcha.in</p></figcaption></figure>
 
 ### Configure the validator client service
 
@@ -209,7 +209,7 @@ sudo journalctl -fu tekuvalidator -o cat | ccze -A
 
 **Expected output:**
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Press `CTRL-C` to exit.
 
