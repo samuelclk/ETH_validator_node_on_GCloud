@@ -9,7 +9,8 @@
 
 ## Hardware & software requirements
 
-* [Preparing your virtual machine](hardware-and-software-requirements/page-2.md)
+* [Preparing your VM - Validator node](hardware-and-software-requirements/preparing-your-vm-validator-node.md)
+* [Preparing your VM - External signer](hardware-and-software-requirements/preparing-your-vm-external-signer.md)
 
 ## Choosing your validator clients
 
