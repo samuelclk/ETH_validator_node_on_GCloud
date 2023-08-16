@@ -1,5 +1,13 @@
 # Google Uptime Check
 
+## Pre-requisites
+
+You must configure port forwarding to ports 30303 and 9000 of your validator node in order for Google Uptime Check to work.
+
+Refer to the [Preparing your virtual machine](../../hardware-and-software-requirements/page-2.md) sub-section of this guide to understand how to.
+
+## Setup
+
 Log in to your google cloud console and type _**"monitoring"**_ into the search bar. Then select the _**"Monitoring - Infrastructure and application quality checks"**_ result.&#x20;
 
 <figure><img src="../../.gitbook/assets/Screenshot 2023-08-16 at 2.10.49 PM.png" alt=""><figcaption></figcaption></figure>
