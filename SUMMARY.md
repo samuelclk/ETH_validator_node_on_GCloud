@@ -43,7 +43,7 @@
   * [Installing & configuring Node Exporter](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-node-exporter.md)
   * [Installing & configuring Grafana](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-grafana.md)
   * [Google Uptime Check](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/google-uptime-check.md)
-  * [Beaconcha.in App Api](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/beaconcha.in-app-api.md)
+  * [Beaconcha.in App API](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/beaconcha.in-app-api.md)
 * [Updating your clients](monitoring-updates-and-troubleshooting/updating-your-clients/README.md)
   * [Updating Nethermind](monitoring-updates-and-troubleshooting/updating-your-clients/updating-nethermind.md)
   * [Updating Teku](monitoring-updates-and-troubleshooting/updating-your-clients/updating-teku.md)
