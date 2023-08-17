@@ -24,6 +24,10 @@ Select `Ubuntu` for the operating system, `Ubuntu 22.04 LTS x86` for the version
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 3.45.57 PM.png" alt=""><figcaption></figcaption></figure>
 
+Scroll down and expand the "Advanced Options" dropdown, then look for the "Network Interfaces" sub-section. Select the dedicated VPC your created in an [earlier sub-section](create-a-dedicated-virtual-private-cloud-vpc.md). Reserve static addresses for both your internal and external IPv4 addresses.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.10.51 PM.png" alt="" width="375"><figcaption></figcaption></figure>
+
 Once you are done, click on the **"Create"** button at the bottom of the screen.
 
 **Expected output:** You should see your VM instance coming online after loading for a few seconds

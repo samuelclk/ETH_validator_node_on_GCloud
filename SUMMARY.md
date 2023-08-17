@@ -10,6 +10,7 @@
 ## Hardware & software requirements
 
 * [Hardware & system requirements](hardware-and-software-requirements/hardware-and-system-requirements.md)
+* [Create a dedicated virtual private cloud (VPC)](hardware-and-software-requirements/create-a-dedicated-virtual-private-cloud-vpc.md)
 * [Preparing your VM - Main validator node](hardware-and-software-requirements/preparing-your-vm-main-validator-node.md)
 * [Preparing your VM - Backup beacon node](hardware-and-software-requirements/preparing-your-vm-backup-beacon-node.md)
 * [Preparing your VM - External signer](hardware-and-software-requirements/preparing-your-vm-external-signer.md)
