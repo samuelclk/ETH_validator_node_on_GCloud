@@ -4,7 +4,7 @@
 
 You must configure port forwarding to ports 30303 and 9000 of your validator node in order for Google Uptime Check to work.
 
-Refer to the [Preparing your virtual machine](../../hardware-and-software-requirements/preparing-your-vm-validator-node.md) sub-section of this guide to understand how to.
+Refer to the [Preparing your virtual machine](../../hardware-and-software-requirements/preparing-your-vm-main-validator-node.md) sub-section of this guide to understand how to.
 
 ## Setup
 

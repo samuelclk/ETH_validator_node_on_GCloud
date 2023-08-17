@@ -1,12 +1,4 @@
-# Preparing your VM - Validator node
-
-## Cost considerations
-
-Because the estimated monthly running costs on Google Cloud from just the validator node is **USD615,** the economics will not make sense if you are planning on just running a single validator.&#x20;
-
-<figure><img src="../.gitbook/assets/Screenshot 2023-08-16 at 5.55.10 PM.png" alt=""><figcaption></figcaption></figure>
-
-A single validator generating 6.0% yield at ETH prices of USD1800 will give you USD3456 per year, or USD288 per month. This means you will need to run at least 3 validators by depositing 96 ETH for this method to make sense economically.
+# Preparing your VM - Main validator node
 
 ## Create a new VM
 
@@ -20,7 +12,7 @@ Choose the following settings:
 2. **Region:** Choose your preferred region but it is recommended to diversify away from the popular regions (e.g. US, EU) to minimise the risk of <mark style="color:red;">correlated downtime.</mark> I am going with Singapore in this example.
 3. **Zone:** Choose any
 4. **Machine configuration:** E2
-5. **Machine type:** e2-standard-8, 32GB
+5. **Machine type:** e2-standard-8, 32GB memory
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-16 at 5.49.17 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -30,7 +22,7 @@ Choose the following settings:
 
 Select `Ubuntu` for the operating system, `Ubuntu 22.04 LTS x86` for the version, `SSD persistent disk` for the boot disk type, and `2000 GB` for the size of the storage.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-08-16 at 5.52.13 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 2.28.49 PM.png" alt=""><figcaption></figcaption></figure>
 
 Once you are done, click on the **"Create"** button at the bottom of the screen.
 

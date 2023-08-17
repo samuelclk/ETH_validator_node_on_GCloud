@@ -9,7 +9,9 @@
 
 ## Hardware & software requirements
 
-* [Preparing your VM - Validator node](hardware-and-software-requirements/preparing-your-vm-validator-node.md)
+* [Hardware & system requirements](hardware-and-software-requirements/hardware-and-system-requirements.md)
+* [Preparing your VM - Main validator node](hardware-and-software-requirements/preparing-your-vm-main-validator-node.md)
+* [Preparing your VM - Backup beacon node](hardware-and-software-requirements/preparing-your-vm-backup-beacon-node.md)
 * [Preparing your VM - External signer](hardware-and-software-requirements/preparing-your-vm-external-signer.md)
 
 ## Choosing your validator clients
