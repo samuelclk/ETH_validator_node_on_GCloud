@@ -17,13 +17,6 @@ eval $(ssh-agent)
 ssh-keygen -t ed25519-sk -C <your email address>
 ```
 
-Add SSH public key to the server device:
-
-```bash
-ssh-copy-id -i ~/.ssh/id_ed25519-sk.pub username@node.ip.address
-ssh-add ~/.ssh/id_ed25519-sk
-```
-
 _**If you don't have a Yubikey:**_
 
 On your client machine, run
@@ -33,12 +26,9 @@ eval $(ssh-agent)
 ssh-keygen -t ed25519 -C <your email address>
 ```
 
-Add SSH public key to the server device:
+Click into your VM on the Google Cloud Console, click **"Edit"**, then scroll down to the **"SSH keys"** sub-section, click **"Add Item"**, and add your SSH public key into a new entry. Then save your changes.
 
-```bash
-ssh-copy-id -i ~/.ssh/id_ed25519.pub <username>@<node.ip.address>
-ssh-add ~/.ssh/id_ed25519
-```
+<figure><img src="../../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 Alternatively, create the **.ssh** folder and **authorized\_keys** file on the server and copy the SSH public key into the following file.
 
@@ -113,7 +103,29 @@ sudo ufw status numbered
 
 You should see something similar to the screenshot below:
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2023-08-09 at 3.31.44 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+
+Now we have to amend the firewall rules on our Google Cloud VPC to align with what we configured here. Head over to your Google Cloud Console, go into the **"VPC networks"** settings, and select your dedicated VPC network.
+
+Under **"Firewalls",** click into the **"xx-allow-ssh"** rule.
+
+<figure><img src="../../../../.gitbook/assets/Screenshot 2023-08-17 at 5.40.20 PM.png" alt=""><figcaption></figcaption></figure>
+
+Then, click on **"Edit"**, change the **"TCP"** port to your amended SSH port, and hit **"Save"**.
+
+<figure><img src="../../../../.gitbook/assets/Screenshot 2023-08-17 at 5.42.02 PM.png" alt=""><figcaption></figcaption></figure>
+
+After hitting "Save", your existing connection might be broken. If it is, you can either,&#x20;
+
+* Reconnect using your own SSH key from your working laptop by running:
+
+```bash
+ssh <username>@<VM_external_IP> -p <your_chosen_SSH_port> -i <path_to_SSH_private_key> -v
+```
+
+* Reconnect using the Google Cloud Console using the custom port option
+
+<figure><img src="../../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 ### **Set up brute force protection**
 

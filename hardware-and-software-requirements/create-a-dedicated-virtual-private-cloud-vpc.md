@@ -18,7 +18,13 @@ Configure the following settings:
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 4.57.07 PM.png" alt=""><figcaption></figcaption></figure>
 
-Scroll all the way down to the "**Firewall rules"** section and check all of the boxes. Then click **"Create"**
+Scroll all the way down to the "**Firewall rules"** section and click into **"xx-xx-allow-custom".** Change the **"Source IPv4 ranges"** to `0.0.0.0/0` and hit **"Save".**
+
+<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+
+
+
+Then, check all of the boxes and click **"Create".**
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.00.56 PM.png" alt=""><figcaption></figcaption></figure>
 

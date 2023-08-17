@@ -20,7 +20,7 @@ sudo apt-get -y install postgresql
 Download and unzip latest Web3signer version [here](https://github.com/ConsenSys/web3signer/releases).
 
 <pre class="language-bash"><code class="lang-bash">cd
-curl -LO &#x3C;https://artifacts.consensys.net/public/web3signer/raw/names/web3signer.tar.gz/versions/23.6.0/web3signer-23.6.0.tar.gz>
+curl -LO https://artifacts.consensys.net/public/web3signer/raw/names/web3signer.tar.gz/versions/23.6.0/web3signer-23.6.0.tar.gz
 <strong>echo "250c91e7fa18ae9d4962b083a95a7018775a6b99991f1423ce99ffef0366d4a5 web3signer-23.6.0.tar.gz" | sha256sum --check 
 </strong></code></pre>
 
@@ -33,7 +33,7 @@ web3signer-23.6.0.tar.gz: OK
 If checksum is verified, extract the files into the `/usr/local/bin`directory and delete the zipped file.
 
 ```sh
-tar xvf web3signer-23.6.0.tar.gz -C /var/local/bin
+sudo tar xvf web3signer-23.6.0.tar.gz -C /usr/local/bin
 sudo rm web3signer-23.6.0.tar.gz
 ```
 
@@ -43,7 +43,7 @@ Create a new user called `postgres` for PostgreSQL to run under and set the pass
 
 ```bash
 sudo useradd --no-create-home postgres
-passwd postgres
+sudo passwd postgres
 ```
 
 Set the owner of the Web3signer directory to `postgres`.&#x20;
@@ -97,25 +97,29 @@ sudo touch /var/lib/postgresql/web3signer_config/config.yaml
 sudo nano /var/lib/postgresql/web3signer_config/config.yaml
 ```
 
-```yaml
-type: "file-keystore"
-keyType: "BLS"
-keystoreFile: "/var/lib/postgresql/validator_signing_keystores/keystore-m_<TIMESTAMP_01>.json"
+<pre class="language-yaml"><code class="lang-yaml"><strong>type: "file-keystore"
+</strong>keyType: "BLS"
+keystoreFile: "/var/lib/postgresql/validator_signing_keystores/keystore-m_&#x3C;TIMESTAMP_01>.json"
 keystorePasswordFile: "/var/lib/postgresql/validator_signing_keystores/keystores_password.txt"
 
 ---
 type: "file-keystore"
 keyType: "BLS"
-keystoreFile: "/var/lib/postgresql/validator_signing_keystores/keystore-m_<TIMESTAMP_02>.json"
+keystoreFile: "/var/lib/postgresql/validator_signing_keystores/keystore-m_&#x3C;TIMESTAMP_02>.json"
 keystorePasswordFile: "/var/lib/postgresql/validator_signing_keystores/keystores_password.txt"
+</code></pre>
 
----
-```
+**Note:** Use the triple dash "---" to add subsequent keys
 
 **Web3signer YAML configuration summary:**
 
-1. keystoreFile: File path to your actual validator signing keystores
-2. keystorePasswordFile: File path to your actual validator signing keystore password stored in plain text format
+1. keystoreFile: File path to your actual validator signing keystores. Use the secure file transfer protocol (sftp) to transfer it from your client machine into this VM
+
+```bash
+sftp -P <external_signer_port> -i <path_to_SSH_key> <username>@<external_signer_IP>
+```
+
+1. keystorePasswordFile: File path to your actual validator signing keystore password stored in plain text format
 
 Set the owner of the directory containing the web3signer configuration file to `postgres`
 

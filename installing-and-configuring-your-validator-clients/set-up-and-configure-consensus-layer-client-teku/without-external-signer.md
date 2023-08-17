@@ -169,7 +169,6 @@ ExecStart=/usr/local/bin/teku/bin/teku vc \
   --validators-proposer-default-fee-recipient=<designated wallet address> \
   --validators-proposer-blinded-blocks-enabled=true\
   --validators-graffiti="<yourgraffiti>" \
-  --metrics-enabled=true \
   --doppelganger-detection-enabled=true 
 
 [Install]

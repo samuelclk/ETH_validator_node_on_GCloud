@@ -13,13 +13,15 @@ Despite being catered towards home-staking, running an ETH validator node reliab
 
 1. Our setup will include a main validator node, a backup/failover beacon node, and an external signer that only communicates with the validator node.
    * Main validator node: Custom VM
-   * Backup beacon node: Google Blockchain Engine (GBE)
+   * Backup beacon node: Google Blockchain Engine (BNE)
    * External signer: Custom VM
-2. We are using a custom VM for our main validator node because the GBE only provides the Geth/Lighthouse client pair for full nodes and we want to use minority clients for our main node
-3. All 3 VMs will sit within the same virtual private cloud (VPC) so that they can communicate securely with one another.
-4. We will implement Google Cloud Armor (GCA) on the main validator node to mitigate DDOS attacks. GCA on the backup beacon node is provided by default.
+2. We are using a custom VM for our main validator node because the BNE only provides the Geth/Lighthouse client pair for full nodes and we want to use minority clients for our main node
+3. All 3 VMs will sit within the same virtual private cloud (VPC) so that they can communicate securely with one another. External communications will need to be authenticated.
+4. According to Google, the standard Google Cloud Armor (GCA) features is automatically available on all VMs with a public IP address to mitigate DDOS attacks
+   * You can further explore GCA's Adaptive Protection if you want higher levels of DDOS protection but this comes with additional costs
+   * GCA on the backup beacon node is provided by default
 
-_**\*insert diagram**_
+<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 ## Cost considerations
 

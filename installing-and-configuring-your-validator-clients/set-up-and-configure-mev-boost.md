@@ -6,7 +6,7 @@ Download latest version of MEV-boost [here](https://github.com/flashbots/mev-boo
 
 ```bash
 cd 
-curl -LO <https://github.com/flashbots/mev-boost/releases/download/v1.6/mev-boost_1.6_linux_amd64.tar.gz>
+curl -LO https://github.com/flashbots/mev-boost/releases/download/v1.6/mev-boost_1.6_linux_amd64.tar.gz
 echo "03ac6cfb13d8f8b6d59f9de5de753412b0840024ef354399bcb4aa4ee8fe5c3b mev-boost_1.6_linux_amd64.tar.gz" | sha256sum --check
 ```
 

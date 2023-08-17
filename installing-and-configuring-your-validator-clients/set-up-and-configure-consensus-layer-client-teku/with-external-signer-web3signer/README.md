@@ -78,6 +78,7 @@ ExecStart=/usr/local/bin/teku/bin/teku \
   --rest-api-enabled=true \
   --builder-endpoint=http://127.0.0.1:18550 \
   --validators-builder-registration-default-enabled=true \
+  --validators-proposer-default-fee-recipient=<designated wallet address> \
   --p2p-nat-method=UPNP
   
 [Install]
@@ -97,7 +98,8 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 7. `--rest-api-enabled`: Allows the validator client to connect to this beacon node. Also allows monitoring endpoints to pull metrics from this service
 8. `--builder-endpoint`: URL to connect to external builders (e.g. MEV relays)
 9. `--validators-builder-registration-default-enabled`: Required when using external builders to build blocks (e.g. MEV relays)
-10. `--p2p-nat-method=UPNP`: Enables your beacon node to better discover and connect to other beacon nodes in the ETH network without needing to use port forwarding
+10. `--validators-proposer-default-fee-recipient`: ETH wallet address to receive rewards from block proposals and MEV bribes (backup setting. Main setting is set on the teku validator client)
+11. `--p2p-nat-method=UPNP`: Enables your beacon node to better discover and connect to other beacon nodes in the ETH network without needing to use port forwarding
 
 ### Start the Teku beacon node service
 
@@ -152,6 +154,7 @@ Paste the configuration parameters below into the file:
 Description=Teku Validator Client (Mainnet)
 Wants=network-online.target
 After=network-online.target
+
 [Service]
 User=teku
 Group=teku
@@ -164,12 +167,11 @@ ExecStart=/usr/local/bin/teku/bin/teku vc \
   --network=mainnet \
   --data-path=/var/lib/teku \
   --validators-external-signer-public-keys=&#x3C;validator pubkeys> \
-  --validators-external-signer-url=http://<a data-footnote-ref href="#user-content-fn-1">&#x3C;external_signer_IP_address></a> \
+  --validators-external-signer-url=http://<a data-footnote-ref href="#user-content-fn-1">&#x3C;external_signer_IP_address></a>:9000 \
   --beacon-node-api-endpoint=http://localhost:5051,http://&#x3C;backup_beacon_node>:&#x3C;http/rest_port_number> \
   --validators-proposer-default-fee-recipient=&#x3C;designated wallet address> \
   --validators-proposer-blinded-blocks-enabled=true\
   --validators-graffiti="&#x3C;yourgraffiti>" \
-  --metrics-enabled=true \
   --doppelganger-detection-enabled=true 
   
 [Install]

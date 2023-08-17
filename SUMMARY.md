@@ -55,9 +55,10 @@
   * [Updating Web3signer](monitoring-updates-and-troubleshooting/updating-your-clients/updating-web3signer.md)
   * [Updating the monitoring suite](monitoring-updates-and-troubleshooting/updating-your-clients/updating-the-monitoring-suite.md)
 
-## Best practices for maximising security and uptime
+## Best practices
 
-* [Page 7](best-practices-for-maximising-security-and-uptime/page-7.md)
+* [Security, uptime, & performance](best-practices/security-uptime-and-performance.md)
+* [Managing your withdrawal wallet](best-practices/managing-your-withdrawal-wallet.md)
 
 ## Useful resources
 
