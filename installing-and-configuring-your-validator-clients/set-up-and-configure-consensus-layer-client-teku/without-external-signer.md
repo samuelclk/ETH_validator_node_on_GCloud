@@ -77,7 +77,8 @@ ExecStart=/usr/local/bin/teku/bin/teku \
   --metrics-enabled=true \
   --rest-api-enabled=true \
   --builder-endpoint=http://127.0.0.1:18550 \
-  --validators-builder-registration-default-enabled=true 
+  --validators-builder-registration-default-enabled=true \
+  --p2p-nat-method=UPNP 
 
 [Install]
 WantedBy=multi-user.target
@@ -96,6 +97,7 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 7. `--rest-api-enabled`: Allows the validator client to connect to this beacon node. Also allows monitoring endpoints to pull metrics from this service
 8. `--builder-endpoint`: URL to connect to external builders (e.g. MEV relays)
 9. `--validators-builder-registration-default-enabled`: Required when using external builders to build blocks (e.g. MEV relays)
+10. `--p2p-nat-method=UPNP`: Enables your beacon node to better discover and connect to other beacon nodes in the ETH network without needing to use port forwarding
 
 ### Start the Teku beacon node service
 

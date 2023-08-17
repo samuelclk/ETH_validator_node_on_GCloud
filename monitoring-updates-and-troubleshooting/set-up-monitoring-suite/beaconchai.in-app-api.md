@@ -1,2 +1,0 @@
-# Beaconchai.in App API
-

@@ -120,6 +120,16 @@ You should see something similar to the screenshot below:
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-09 at 3.31.44 PM.png" alt=""><figcaption></figcaption></figure>
 
+Now we have to amend the firewall rules on our Google Cloud VPC to align with what we configured here. Head over to your Google Cloud Console, go into the **"VPC networks"** settings, and select your dedicated VPC network.
+
+Click into the **"xx-allow-ssh"** rule.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.40.20 PM.png" alt=""><figcaption></figcaption></figure>
+
+Then, click on **"Edit"**, change the **"TCP"** port to your amended SSH port, and hit **"Save"**.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.42.02 PM.png" alt=""><figcaption></figcaption></figure>
+
 ### **Set up brute force protection**
 
 Even though having our SSH key access implemented means an attacker will need 25 million years to try all combinations, lets go ahead and make it even harder for them - by limiting the number of attempts per IP address to 5 tries and blocking them after.

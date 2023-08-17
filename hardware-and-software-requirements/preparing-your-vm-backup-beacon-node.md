@@ -1,5 +1,7 @@
 # Preparing your VM - Backup beacon node
 
+## Provisioning the VM
+
 Go to your Google Cloud console and search for **"Blockchain node engine".**
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 3.12.44 PM.png" alt=""><figcaption></figcaption></figure>
@@ -13,3 +15,9 @@ Select your preferred location - preferably outside of US and EU, which leaves u
 Once you are done, click on the "Create" button again and you should see your blockchain node engine being set up.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 3.17.32 PM.png" alt=""><figcaption></figcaption></figure>
+
+## Finding your beacon node endpoint
+
+Click into your backup beacon node and copy the **"Beacon API Endpoint"** URL. This will be used during your Teku setup of your main validator node.&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 6.04.48 PM.png" alt="" width="375"><figcaption></figcaption></figure>

@@ -77,7 +77,8 @@ ExecStart=/usr/local/bin/teku/bin/teku \
   --metrics-enabled=true \
   --rest-api-enabled=true \
   --builder-endpoint=http://127.0.0.1:18550 \
-  --validators-builder-registration-default-enabled=true 
+  --validators-builder-registration-default-enabled=true \
+  --p2p-nat-method=UPNP
   
 [Install]
 WantedBy=multi-user.target
@@ -96,6 +97,7 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 7. `--rest-api-enabled`: Allows the validator client to connect to this beacon node. Also allows monitoring endpoints to pull metrics from this service
 8. `--builder-endpoint`: URL to connect to external builders (e.g. MEV relays)
 9. `--validators-builder-registration-default-enabled`: Required when using external builders to build blocks (e.g. MEV relays)
+10. `--p2p-nat-method=UPNP`: Enables your beacon node to better discover and connect to other beacon nodes in the ETH network without needing to use port forwarding
 
 ### Start the Teku beacon node service
 
@@ -182,7 +184,7 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 2. `--data-path`: Specify the directory for Teku to store the validator info
 3. `--validators-external-signer-public-keys`: Public keys of the validators set up for remote signing
 4. `--validators-external-signer-url`: URL to connect to the external signer. We don't need to configure TLS (i.e. using 'https') here as the external signer will be sitting in our own secure virtual private cloud (VPC) with strict firewall rules so that only the designated VC can 'talk' to it
-5. `--beacon-node-api-endpoint`: URLs to connect to the main and backup beacon nodes
+5. `--beacon-node-api-endpoint`: URLs to connect to the main and backup beacon nodes. Find your backup beacon node [here](../../../hardware-and-software-requirements/preparing-your-vm-backup-beacon-node.md).
 6. `--validators-proposer-default-fee-recipient`: ETH wallet address to receive rewards from block proposals and MEV bribes
 7. `--validators-proposer-blinded-blocks-enabled`: Required when using external builders to build blocks (e.g. MEV relays)
 8. `--validators-graffiti`: Optional text to display on-chain when your validator proposes a block
