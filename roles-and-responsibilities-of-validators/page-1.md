@@ -6,7 +6,7 @@ In short, validator nodes on the Ethereum network _**process transactions and se
 
 In the former, they would be the **Attesters** and, **Proposers** in the latter.
 
-In exchange for doing the work above, validators receive rewards from both users and the Ethereum protocol directly. However, if validators are **caught acting dishonestly** by other nodes in the network, **their stake is slashed** - forcibly burning their 32 ETH based on the severity of their actions. This mechanism is further explained in the [Rewards and penalties sub-section](rewards-and-penalties.md).
+In exchange for doing the work above, validators receive rewards from both users and the Ethereum protocol directly. However, if validators are **caught acting dishonestly** by other nodes in the network, **their stake is slashed** - forcibly burning their 32 ETH based on the severity of their actions. This mechanism is further explained in the [Rewards and penalties sub-section](../understanding-eth-validators/rewards-and-penalties.md).
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Abstracted value chain of the ETH validator network</p></figcaption></figure>
 

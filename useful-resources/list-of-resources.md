@@ -13,3 +13,4 @@
 * [How does Proof-of-Stake on Ethereum work?](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/)
 * ETH burn rate, APR, gas fees on [Ultrasound.money](https://ultrasound.money/)
 * [Validator entry and exit queue status](https://wenmerge.com/)
+* [Understanding the inactivity leak](https://eth2book.info/capella/part2/incentives/inactivity/)

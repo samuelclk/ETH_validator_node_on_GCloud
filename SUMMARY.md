@@ -1,11 +1,11 @@
 # Table of contents
 
-* [Welcome!](README.md)
+* [Welcome Adventurer](README.md)
 * [Quick Start](quick-start.md)
 
 ## Understanding ETH validators&#x20;
 
-* [Roles of a node operator](understanding-eth-validators/roles-of-a-node-operator.md)
+* [Roles of a node operator](roles-and-responsibilities-of-validators/page-1.md)
 * [Responsibilities of a node operator](understanding-eth-validators/responsibilities-of-a-node-operator.md)
 * [Rewards and penalties](understanding-eth-validators/rewards-and-penalties.md)
 
@@ -14,13 +14,13 @@
 * [Importance of client diversity](choosing-your-validator-clients/importance-of-client-diversity.md)
 * [Why Nethermind & Teku?](choosing-your-validator-clients/why-nethermind-and-teku.md)
 
-## Hardware & software requirements
+## Hardware (VMs) & systems setup
 
-* [Hardware & system requirements](hardware-and-software-requirements/hardware-and-system-requirements.md)
-* [Create a dedicated virtual private cloud (VPC)](hardware-and-software-requirements/create-a-dedicated-virtual-private-cloud-vpc.md)
-* [Preparing your VM - Main validator node](hardware-and-software-requirements/preparing-your-vm-main-validator-node.md)
-* [Preparing your VM - Backup beacon node (Experimental)](hardware-and-software-requirements/preparing-your-vm-backup-beacon-node-experimental.md)
-* [Preparing your VM - External signer](hardware-and-software-requirements/preparing-your-vm-external-signer.md)
+* [Hardware & system requirements](hardware-vms-and-systems-setup/hardware-and-system-requirements.md)
+* [Create a dedicated virtual private cloud (VPC)](hardware-vms-and-systems-setup/create-a-dedicated-virtual-private-cloud-vpc.md)
+* [Preparing your VM - Main validator node](hardware-vms-and-systems-setup/preparing-your-vm-main-validator-node.md)
+* [Preparing your VM - Backup beacon node (Experimental)](hardware-vms-and-systems-setup/preparing-your-vm-backup-beacon-node-experimental.md)
+* [Preparing your VM - External signer](hardware-vms-and-systems-setup/preparing-your-vm-external-signer.md)
 
 ## Installing & configuring your validator clients
 
