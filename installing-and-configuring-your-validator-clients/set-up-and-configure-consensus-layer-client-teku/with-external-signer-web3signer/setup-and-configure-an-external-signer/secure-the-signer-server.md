@@ -61,7 +61,7 @@ sudo nano /etc/ssh/sshd_config
 2. Uncomment `#AuthorizedKeysFile` if it is commented (by removing the `#` in front of it)
 3. Change `KbdInteractiveAuthentication yes` to `KbdInteractiveAuthentication no` and uncomment (by removing the `#` in front of it) - **older versions of SSH call this option `ChallengeResponseAuthentication` instead of `KbdInteractiveAuthentication`**
 4. Change `PasswordAuthentication yes` to `PasswordAuthentication no` and uncomment (by removing the `#` in front of it)
-5. Change `PermitRootLogin yes` to `PermitRootLogin prohibit-password` unless it's already set to that and has a `#` in front of it
+5. Change `#PermitRootLogin prohibit-password` to `PermitRootLogin no` , removing the `#` prefix
 
 Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`.
 

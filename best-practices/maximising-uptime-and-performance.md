@@ -1,0 +1,25 @@
+# Maximising uptime and performance
+
+## Hardware
+
+In general, don't overly scrimp on hardware otherwise you will miss more attestations than normal or even be unable to sync your node - especially if you want to run minority clients. Some recommendations for hardware and system requirements below given the recent increase in load on ETH validator nodes.
+
+1. **CPU:** Get something that is fast enough - e.g.  E2 with 8 vCPU and 4 cores
+   1. Compare the list of CPU speeds [here](https://sech.me/boinc/Amicable/cpu\_list.php). Try to choose something with >5.0 GFLOPS/core
+2. **RAM:** At least 32GB&#x20;
+3. **Storage:** 2TB NVME SSD equivalent
+   1. Choose from the "good" list [here](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038)
+
+## SOPs
+
+1. Update your clients in a timely manner as these usually come with performance improvement fixes
+   * Create a new server on Discord to receive alerts on new releases and patches of your execution layer and consensus layer clients. Keep this channel clean.
+   * Set alerts from the announcement channels to your own server
+2. Make sure your NTP service is active after running updates
+3. Set up the monitoring suite detailed in this guide so that you are alerted on any downtime promptly
+4. Maintain your own SOPs table for dealing with the various scenarios of downtime, including edge cases. Improve on this over time based on your own setup environment.
+5. During normal operations, configure your clients to restart themselves automatically if they go down. This is in accordance to this guide
+6. If you need to migrate your validator keys onto a new VM or device, always rehearse your migration process on the testnet first before you attempt to do so on the mainnet. Create your own playbook similar to [this](https://hackmd.io/0fAqTy8iSIKViJO5HOf3Nw) so that you can refer to it while you are doing the actual migration
+
+
+

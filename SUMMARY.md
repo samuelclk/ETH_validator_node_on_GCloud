@@ -57,7 +57,8 @@
 
 ## Best practices
 
-* [Security, uptime, & performance](best-practices/security-uptime-and-performance.md)
+* [Maximising uptime and performance](best-practices/maximising-uptime-and-performance.md)
+* [Optimising security](best-practices/optimising-security.md)
 * [Managing your withdrawal wallet](best-practices/managing-your-withdrawal-wallet.md)
 
 ## Useful resources
