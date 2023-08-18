@@ -2,7 +2,8 @@
 
 ## Warnings
 
-* <mark style="color:blue;">This step involves depositing the required amount of ETH to the Ethereum deposit contract.</mark> <mark style="color:blue;"></mark><mark style="color:blue;">**DO NOT SEND ETH TO THE DEPOSIT CONTRACT**</mark><mark style="color:blue;">. Rather, this is done in a web browser running your Metamask (or other) wallet via the</mark> [<mark style="color:blue;">Ethereum Launchpad website</mark>](https://launchpad.ethereum.org/en/)
+* Follow the instructions of this section closely. We will be using Metamask to connect to the Ethereum Launchpad website to complete the deposit process
+* **DO NOT TRANSFER ETH DIRECTLY INTO THE BEACON DEPOSIT CONTRACT ADDRESS**
 * Spare no effort in checking (and double checking) all details before making the transaction - _e.g. public keys of validator signing keys and the deposit data file matches, verify smart contract address of the deposit contract from multiple sources_
 * Make sure both your execution and consensus layer clients are fully synced and running without errors before you make the deposit
 

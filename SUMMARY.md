@@ -17,7 +17,8 @@
 
 ## Choosing your validator clients
 
-* [Page 3](choosing-your-validator-clients/page-3.md)
+* [Importance of client diversity](choosing-your-validator-clients/importance-of-client-diversity.md)
+* [Why Nethermind & Teku?](choosing-your-validator-clients/why-nethermind-and-teku.md)
 
 ## Installing & configuring your validator clients
 
@@ -58,7 +59,7 @@
 ## Best practices
 
 * [Maximising uptime and performance](best-practices/maximising-uptime-and-performance.md)
-* [Optimising security](best-practices/optimising-security.md)
+* [Optimising security](best-practices/security-uptime-and-performance.md)
 * [Managing your withdrawal wallet](best-practices/managing-your-withdrawal-wallet.md)
 
 ## Useful resources

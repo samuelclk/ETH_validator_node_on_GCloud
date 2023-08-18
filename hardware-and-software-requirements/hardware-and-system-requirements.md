@@ -9,7 +9,7 @@ Despite being catered towards home-staking, running an ETH validator node reliab
 3. Storage: 2TB SSD persistent disk
 4. Operating system: Ubuntu 22.04 LTS
 
-## Architecture
+## Network Architecture
 
 1. Our setup will include a main validator node, a backup/failover beacon node, and an external signer that only communicates with the validator node.
    * Main validator node: Custom VM
@@ -22,6 +22,10 @@ Despite being catered towards home-staking, running an ETH validator node reliab
    * GCA on the backup beacon node is provided by default
 
 <figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+
+## System stack
+
+<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 ## Cost considerations
 

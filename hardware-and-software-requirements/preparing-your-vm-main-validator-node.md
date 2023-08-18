@@ -24,7 +24,11 @@ Select `Ubuntu` for the operating system, `Ubuntu 22.04 LTS x86` for the version
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 2.28.49 PM.png" alt="" width="375"><figcaption></figcaption></figure>
 
-Scroll down and expand the "Advanced Options" dropdown, then look for the "Network Interfaces" sub-section. Select the dedicated VPC your created in an [earlier sub-section](create-a-dedicated-virtual-private-cloud-vpc.md). Reserve static addresses for both your internal and external IPv4 addresses.
+Scroll down and expand the **"Advanced Options"** dropdown. Under the **"Networking"** sub-section, add a network tag by typing in `tcp-udp` . This will be used to configure your firewall rules later.
+
+<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+
+Then, look for the **"Network Interfaces"** sub-section. Select the dedicated VPC your created in an [earlier sub-section](create-a-dedicated-virtual-private-cloud-vpc.md). Reserve static addresses for both your internal and external IPv4 addresses.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.10.51 PM.png" alt="" width="375"><figcaption></figcaption></figure>
 

@@ -114,6 +114,8 @@ You should see something similar to the screenshot below:
 
 Now we have to amend the firewall rules on our Google Cloud VPC to align with what we configured here. Head over to your Google Cloud Console, go into the **"VPC networks"** settings, and select your dedicated VPC network.
 
+### VPC settings: SSH Port
+
 Under **"Firewalls",** click into the **"xx-allow-ssh"** rule.
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.40.20 PM.png" alt=""><figcaption></figcaption></figure>
@@ -122,7 +124,7 @@ Then, click on **"Edit"**, change the **"TCP"** port to your amended SSH port, a
 
 <figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.42.02 PM.png" alt=""><figcaption></figcaption></figure>
 
-After hitting "Save", your existing connection might be broken. If it is, you can either&#x20;
+After hitting "Save", your existing connection might be broken. If it is, you can either,&#x20;
 
 * Reconnect using your own SSH key from your working laptop by running:
 
@@ -133,6 +135,43 @@ ssh <username>@<VM_external_IP> -p <your_chosen_SSH_port> -i <path_to_SSH_privat
 * Reconnect using the Google Cloud Console using the custom port option
 
 <figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+
+### VPC settings: Ports 30303, 9000, & 3000
+
+Under **"Firewalls",** click **"ADD FIREWALL RULE"**.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.40.20 PM.png" alt=""><figcaption></figcaption></figure>
+
+Configure the following firewall settings for **port 30303.**
+
+1. Name: \*any
+2. Network: your dedicated VPC created earlier
+3. Priority: 65534
+4. Direction of traffic: Ingress
+5. Allow on match: Allow
+6. Targets: Specified target tags
+7. Target tags: tcp-udp (or whatever the name your chose for your network tag for your validator node VM earlier)
+8. Source IPv4 ranges: 0.0.0.0/0
+9. TCP: 30303
+10. UDP: 30303
+
+<div>
+
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+Then, hit **"CREATE"** and repeat the same steps for **ports 9000 and 3000.**
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-08-17 at 5.42.02 PM.png" alt=""><figcaption></figcaption></figure>
 
 ### **Set up brute force protection**
 

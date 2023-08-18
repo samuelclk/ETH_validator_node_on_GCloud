@@ -45,4 +45,6 @@ Next, key in the name of the alert you created and test the service. If the conn
 
 Go ahead and click _**"CREATE"**_  to complete the setup.
 
+_\*Repeat the same steps for ports 9000 and 3000._
+
 _**Congrats! You have set up a free alerts tool to check if each of your clients are running. This is useful to identify out-of-memory, database corruption, power/internet, or hardware issues.**_
