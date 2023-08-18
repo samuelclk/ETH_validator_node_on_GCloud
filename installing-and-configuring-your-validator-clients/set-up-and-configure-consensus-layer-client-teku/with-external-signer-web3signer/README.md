@@ -186,7 +186,7 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 2. `--data-path`: Specify the directory for Teku to store the validator info
 3. `--validators-external-signer-public-keys`: Public keys of the validators set up for remote signing
 4. `--validators-external-signer-url`: URL to connect to the external signer. We don't need to configure TLS (i.e. using 'https') here as the external signer will be sitting in our own secure virtual private cloud (VPC) with strict firewall rules so that only the designated VC can 'talk' to it
-5. `--beacon-node-api-endpoint`: URLs to connect to the main and backup beacon nodes. Find your backup beacon node [here](../../../hardware-and-software-requirements/preparing-your-vm-backup-beacon-node.md).
+5. `--beacon-node-api-endpoint`: URLs to connect to the main and backup beacon nodes if any. You may refer to an experimental backup beacon node setup using Google's blockchain node engine [here](../../../hardware-and-software-requirements/preparing-your-vm-backup-beacon-node-experimental.md).
 6. `--validators-proposer-default-fee-recipient`: ETH wallet address to receive rewards from block proposals and MEV bribes
 7. `--validators-proposer-blinded-blocks-enabled`: Required when using external builders to build blocks (e.g. MEV relays)
 8. `--validators-graffiti`: Optional text to display on-chain when your validator proposes a block
