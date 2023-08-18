@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome Adventurer](README.md)
+* [Hello from Stakesaurus!](README.md)
 * [Quick Start](quick-start.md)
 
 ## Understanding ETH validators&#x20;
