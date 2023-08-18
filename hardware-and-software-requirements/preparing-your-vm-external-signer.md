@@ -4,7 +4,7 @@
 
 Go to your google cloud console and create a new VM.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Choose the following settings:
 
@@ -18,7 +18,7 @@ Choose the following settings:
 
 &#x20;Under **Boot disk**, click on the **"change"** button.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Select `Ubuntu` for the operating system, `Ubuntu 22.04 LTS x86` for the version, Balanced `persistent disk` for the boot disk type, and 32 `GB` for the size of the storage.
 

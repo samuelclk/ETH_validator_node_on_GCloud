@@ -7,7 +7,8 @@ Despite being catered towards home-staking, running an ETH validator node reliab
 1. CPU: E2 with 8 vCPU and 4 cores&#x20;
 2. RAM: 32GB&#x20;
 3. Storage: 2TB SSD persistent disk
-4. Operating system: Ubuntu 22.04 LTS
+4. Network bandwidth: Uncapped or at least 2 TB per month at 100Mb/s
+5. Operating system: Ubuntu 22.04 LTS
 
 ## Network Architecture
 

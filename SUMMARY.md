@@ -3,9 +3,16 @@
 * [Welcome!](README.md)
 * [Quick Start](quick-start.md)
 
-## Roles & responsibilities of validators&#x20;
+## Understanding ETH validators&#x20;
 
-* [Page 1](roles-and-responsibilities-of-validators/page-1.md)
+* [Roles of a node operator](understanding-eth-validators/roles-of-a-node-operator.md)
+* [Responsibilities of a node operator](understanding-eth-validators/responsibilities-of-a-node-operator.md)
+* [Rewards and penalties](understanding-eth-validators/rewards-and-penalties.md)
+
+## Choosing your validator clients
+
+* [Importance of client diversity](choosing-your-validator-clients/importance-of-client-diversity.md)
+* [Why Nethermind & Teku?](choosing-your-validator-clients/why-nethermind-and-teku.md)
 
 ## Hardware & software requirements
 
@@ -14,11 +21,6 @@
 * [Preparing your VM - Main validator node](hardware-and-software-requirements/preparing-your-vm-main-validator-node.md)
 * [Preparing your VM - Backup beacon node (Experimental)](hardware-and-software-requirements/preparing-your-vm-backup-beacon-node-experimental.md)
 * [Preparing your VM - External signer](hardware-and-software-requirements/preparing-your-vm-external-signer.md)
-
-## Choosing your validator clients
-
-* [Importance of client diversity](choosing-your-validator-clients/importance-of-client-diversity.md)
-* [Why Nethermind & Teku?](choosing-your-validator-clients/why-nethermind-and-teku.md)
 
 ## Installing & configuring your validator clients
 
