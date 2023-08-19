@@ -32,3 +32,24 @@ There are two main mechanisms that will occur during an inactivity leak:
 
 1. **Normal attestation rewards will stop for all validators.** Block proposers will still receive their normal rewards from all 3 sources
 2. **Quadratic leak** - where inactive validators will suffer increasing penalties that grows quadratically over time until the network has >2/3 of active validators once again
+
+## Double signing
+
+Double signing is a slash-able offense and occurs when your validator:
+
+1. Signs two different beacon blocks for the same slot while serving as proposer - i.e. endorsing two different versions of the chain's history
+2. Signs an attestation that “surrounds” another one while serving as an attester - i.e. trying to change the history of the chain&#x20;
+3. Signs two different attestations with the same target while serving as an attester - i.e. signing the same block twice using the same key
+
+Although these slashing mechanisms were set in place to discourage dishonest or malicious behaviour by the validator network. They can be cause by negligence and misconfiguration as well. In fact, all of the slashing incidents to-date have been due to common technical mistakes and you can learn how to prevent them below.
+
+{% content-ref url="../best-practices/preventing-slashing.md" %}
+[preventing-slashing.md](../best-practices/preventing-slashing.md)
+{% endcontent-ref %}
+
+When your validator is slashed, the following sequence of events will take place.
+
+1. Your validator will be forcibly scheduled to exit the network within the next 36 days
+2. Receive a minimal penalty initially when a whistleblowing validator reports your validator
+3. Incur additional penalties for missing your validator duties over the next 36 days until your validator exits the network&#x20;
+4. Additionally, a special penalty will be imposed on your validator for correlated slashing. This penalty increases with the number of other validators that were slashed over the same period as yours and can even come up to your entire effective balance.

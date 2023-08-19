@@ -60,6 +60,7 @@
 
 ## Best practices
 
+* [Preventing slashing](best-practices/preventing-slashing.md)
 * [Maximising uptime and performance](best-practices/maximising-uptime-and-performance.md)
 * [Optimising security](best-practices/security-uptime-and-performance.md)
 * [Managing your withdrawal wallet](best-practices/managing-your-withdrawal-wallet.md)

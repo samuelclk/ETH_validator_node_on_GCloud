@@ -19,7 +19,6 @@ In general, don't overly scrimp on hardware otherwise you will miss more attesta
 3. Set up the monitoring suite detailed in this guide so that you are alerted on any downtime promptly
 4. Maintain your own SOPs table for dealing with the various scenarios of downtime, including edge cases. Improve on this over time based on your own setup environment.
 5. During normal operations, configure your clients to restart themselves automatically if they go down. This is in accordance to this guide
-6. If you need to migrate your validator keys onto a new VM or device, always rehearse your migration process on the testnet first before you attempt to do so on the mainnet. Create your own playbook similar to [this](https://hackmd.io/0fAqTy8iSIKViJO5HOf3Nw) so that you can refer to it while you are doing the actual migration
 
 
 
