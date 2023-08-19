@@ -1,4 +1,4 @@
-# Hello from Stakesaurus!
+# Stakesaurus guide to ETH staking on Google Cloud
 
 ## Welcome to the guide
 
@@ -8,7 +8,9 @@ If you are coming from Github, check out the Gitbook version here for a better r
 
 {% embed url="https://www.stakesaurus.com/" %}
 
-While there are already existing guides out there on how to set up an ETH validator node, I found that they tend to assume some level of working technical knowledge.&#x20;
+or email me at **`sam@stakesaurus.com`**
+
+While there are already existing guides out there on how to set up an ETH validator node, I find that they tend to assume some level of working technical knowledge.&#x20;
 
 Sometimes seemingly obvious but important steps are skipped which prevents completely non-technical but aspiring node operators to give up.&#x20;
 
@@ -16,11 +18,12 @@ Hence, I put this guide together catering to the laymen. With this, I hope to br
 
 **Some key features of this guide:**
 
-1. Catered towards using Google Cloud's services for the staking infrastructure / hardware
-2. Optimised to slashing and inactivity leaks (instead of cost)
-3. Covers the conceptual understanding of how validators work under the hood and how slashing happens
-4. How to decide which validator clients to use as a newcomer
-5. Nethermind (EL) + Teku (CL) client set
+1. Highly copy-paste-able shell bash commands + step-by-step instructions for non-command procedures
+2. Catered towards using Google Cloud's services for the staking infrastructure / hardware
+3. Optimised to slashing and inactivity leaks (instead of cost)
+4. Covers the conceptual understanding of how validators work under the hood and how slashing happens
+5. How to decide which validator clients to use as a newcomer
+6. Nethermind (EL) + Teku (CL) client set
 
 I will be releasing guides covering <mark style="background-color:orange;">different client sets</mark>, <mark style="background-color:blue;">cost-efficient home setups</mark>, and <mark style="background-color:green;">enterprise-level setups</mark> next. **Drop your email below so you don't miss it!**
 
