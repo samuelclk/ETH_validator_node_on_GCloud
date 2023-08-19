@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Stakesaurus guide to ETH staking on the Cloud](README.md)
+* [Stakesaurus guide to ETH staking on Google Cloud](README.md)
 * [Quick Start](quick-start.md)
 
 ## Understanding ETH validators&#x20;
