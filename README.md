@@ -2,7 +2,7 @@
 
 ## Welcome to the guide
 
-Check out the Gitbook version here for a better reading experience -&#x20;
+Check out the Gitbook version here for a better reading experience - [https://stakesaurus.gitbook.io/gcloud-eth-validator-node-setup-guide/](https://stakesaurus.gitbook.io/gcloud-eth-validator-node-setup-guide/)
 
 ### Need 1-to-1 guided support? Drop by and say hi to us!
 
