@@ -10,6 +10,8 @@ If you are coming from Github, check out the Gitbook version here for a better r
 
 or email me at **`sam@stakesaurus.com`**
 
+## Why write another ETH staking guide?
+
 While there are already existing guides out there on how to set up an ETH validator node, I find that they tend to assume some basic level of working technical knowledge.&#x20;
 
 Sometimes seemingly obvious but important steps are skipped which prevents completely non-technical but aspiring node operators to give up.&#x20;
