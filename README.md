@@ -10,19 +10,23 @@ If you are coming from Github, check out the Gitbook version here for a better r
 
 or email me at **`sam@stakesaurus.com`**
 
+## Credits
+
+This guide references and builds upon several other guides that came before mine and I could not have been able to run my own validator nodes without them. Please check out some of these OG contributors here - [Ethstaker](https://docs.ethstaker.cc/ethstaker-knowledge-base/), [CoinCashew](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet), [Somer Esat](https://github.com/SomerEsat/ethereum-staking-guides), [Remy Roy](https://github.com/eth-educators/ethstaker-guides/blob/main/prepare-for-the-merge.md), [Rocketpool ](https://docs.rocketpool.net/guides/)
+
 ## Why write another ETH staking guide?
 
-While there are already existing guides out there on how to set up an ETH validator node, I find that they tend to assume some basic level of working technical knowledge.&#x20;
+While there are already existing guides out there on how to set up an ETH validator node, I find that they sometimes assume some basic level of working technical knowledge.&#x20;
 
-Sometimes seemingly obvious but important steps are skipped which prevents completely non-technical but aspiring node operators to give up.&#x20;
+This can result in seemingly obvious but important steps being skipped, which prevents completely non-technical but aspiring node operators from pushing through.
 
 Hence, I put this guide together catering to the laymen. With this, I hope to bring you guys from zero-to-one on your journey as an ETH validator node operator!
 
 **Some key features of this guide:**
 
-1. Highly copy-paste-able shell bash commands + step-by-step instructions for non-command procedures
+1. Highly copy-paste-able shell bash commands + step-by-step instructions for all non-command procedures
 2. Catered towards using Google Cloud's services for the staking infrastructure / hardware
-3. Optimised to slashing and inactivity leaks (instead of cost)
+3. Optimised to preventing slashing and inactivity leaks (instead of cost)
 4. Covers the conceptual understanding of how validators work under the hood and how slashing happens
 5. How to decide which validator clients to use as a newcomer
 6. Nethermind (EL) + Teku (CL) client set
