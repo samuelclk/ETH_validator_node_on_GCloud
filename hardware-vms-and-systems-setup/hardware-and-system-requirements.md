@@ -7,8 +7,12 @@ Despite being catered towards home-staking, running an ETH validator node reliab
 1. CPU: E2 with 8 vCPU and 4 cores&#x20;
 2. RAM: 32GB&#x20;
 3. Storage: 2TB SSD persistent disk
-4. Network bandwidth: Uncapped or at least 2 TB per month at 100Mb/s
+4. Network bandwidth:&#x20;
+   * uncapped or at least 2 TB per month&#x20;
+   * at least 10Mb/s internet speed dedicated for your node
+   * VPC / subnet / VLAN segregation from other non-validating devices or VMs
 5. Operating system: Ubuntu 22.04 LTS
+6. Power: Uninterruptible power supply (UPS)
 
 ## Network Architecture
 
