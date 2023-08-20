@@ -1,5 +1,8 @@
 # List of resources
 
+* Ethstaker [Discord](https://discord.gg/krrwKQSV) and [Reddit](https://www.reddit.com/r/ethstaker/)
+* Nethermind [Discord](https://discord.gg/b73Ac7YZP5) and [Documentation](https://docs.nethermind.io/nethermind/)
+* Teku [Discord](https://discord.gg/consensys) and [Documentation](https://docs.teku.consensys.net/introduction)
 * [Overall best practices](https://docs.google.com/document/d/1WZuP-K0S4RKlwH4GQVcGpgzVYPdpZF0WiHsawnmOKxM/edit)
 * [Good vs less great SSDs for staking](https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038)&#x20;
 * [How to choose the right CPU](https://sech.me/boinc/Amicable/cpu\_list.php)
