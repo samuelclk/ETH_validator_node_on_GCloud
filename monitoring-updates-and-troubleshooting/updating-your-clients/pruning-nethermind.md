@@ -45,7 +45,7 @@ If you have configured the pruning mode correctly, you should see the following 
 > Full Pruning Ready to start: pruning garbage before state BLOCK\_NUMBER with root ROOT\_HASH.\
 > **WARN**: Full Pruning Started on root hash ROOT\_HASH: do not close the node until finished or progress will be lost.
 
-_**\*As the warning states, do not restart your node from here on until the pruning process is completed.** Else you will have to restart the whole pruning process or worse, end up with a corrupted database._&#x20;
+_**\*As the warning states, do not restart your node from here on until the pruning process is completed.** Else you will have to restart the whole pruning process, or worse, end up with a corrupted database._&#x20;
 
 After a few minutes, you will start to see some progress logs:
 
