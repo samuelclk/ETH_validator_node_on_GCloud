@@ -10,7 +10,7 @@ The breakdown of these fees on average are as follows:
 
 With a 32 ETH stake, the average yield will be 1.92 ETH per annum. However, because the APR from tips and MEV bribes are random and tend to be large when they occur (i.e. a heavy right skew), the median total APR, which is what most validators will be getting is closer to 4.5% - 5.0%.&#x20;
 
-These rewards are received every \~6.4 minutes (every epoch) and the accumulated balance is automatically withdrawn to your designated wallet every 4 - 5 days.
+These rewards are received every \~6.4 minutes (every epoch) and the accumulated balance is automatically withdrawn to your designated wallet every 6 days.
 
 ## Penalties
 
