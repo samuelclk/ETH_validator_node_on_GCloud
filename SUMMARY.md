@@ -57,6 +57,7 @@
   * [Updating Teku](monitoring-updates-and-troubleshooting/updating-your-clients/updating-teku.md)
   * [Updating Web3signer](monitoring-updates-and-troubleshooting/updating-your-clients/updating-web3signer.md)
   * [Updating the monitoring suite](monitoring-updates-and-troubleshooting/updating-your-clients/updating-the-monitoring-suite.md)
+  * [Pruning Nethermind](monitoring-updates-and-troubleshooting/updating-your-clients/pruning-nethermind.md)
 
 ## Best practices
 

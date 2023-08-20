@@ -19,6 +19,8 @@ In general, don't overly scrimp on hardware otherwise you will miss more attesta
 3. Set up the monitoring suite detailed in this guide so that you are alerted on any downtime promptly
 4. Maintain your own SOPs table for dealing with the various scenarios of downtime, including edge cases. Improve on this over time based on your own setup environment.
 5. During normal operations, configure your clients to restart themselves automatically if they go down. This is in accordance to this guide
+6. Prune your execution layer clients before you reach <300GB of available space
+7. Check for scheduled sync committee duties [here ](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-ii-maintenance/checking-my-eth-validators-sync-committee-duties)and block proposal duties [here](https://wenmerge.com/block-proposer-schedule/) before starting the pruning process
 
 
 

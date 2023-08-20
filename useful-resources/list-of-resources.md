@@ -17,3 +17,6 @@
 * ETH burn rate, APR, gas fees on [Ultrasound.money](https://ultrasound.money/)
 * [Validator entry and exit queue status](https://wenmerge.com/)
 * [Understanding the inactivity leak](https://eth2book.info/capella/part2/incentives/inactivity/)
+* [Check scheduled block proposal duties](https://wenmerge.com/block-proposer-schedule/)
+* [Check scheduled sync committee duties](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet/part-ii-maintenance/checking-my-eth-validators-sync-committee-duties)
+
