@@ -10,7 +10,7 @@ If you are coming from Github, check out the Gitbook version here for a better r
 
 or email me at **`sam@stakesaurus.com`**
 
-While there are already existing guides out there on how to set up an ETH validator node, I find that they tend to assume some level of working technical knowledge.&#x20;
+While there are already existing guides out there on how to set up an ETH validator node, I find that they tend to assume some basic level of working technical knowledge.&#x20;
 
 Sometimes seemingly obvious but important steps are skipped which prevents completely non-technical but aspiring node operators to give up.&#x20;
 
@@ -25,7 +25,14 @@ Hence, I put this guide together catering to the laymen. With this, I hope to br
 5. How to decide which validator clients to use as a newcomer
 6. Nethermind (EL) + Teku (CL) client set
 
-I will be releasing guides covering <mark style="background-color:orange;">different client sets</mark>, <mark style="background-color:blue;">cost-efficient home setups</mark>, and <mark style="background-color:green;">enterprise-level setups</mark> next. **Drop your email below so you don't miss it!**
+Coming up next, I will also be building more guides covering the following:
+
+1. <mark style="background-color:orange;">different client sets</mark>
+2. <mark style="background-color:blue;">cost-efficient home setups</mark>&#x20;
+3. <mark style="background-color:green;">enterprise-level setups</mark>&#x20;
+4. <mark style="background-color:purple;">specific use cases</mark> - e.g. migrating clients, setting backup nodes, external signer & HSM, MEV Boost, Telegram/Discord monitoring bots
+
+**Drop your email below so you don't miss it!**
 
 {% @mailchimp/mailchimpSubscribe %}
 
