@@ -44,7 +44,6 @@
 
 ## Monitoring, updates, and troubleshooting
 
-* [Overview](monitoring-updates-and-troubleshooting/overview.md)
 * [Set up monitoring suite](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/README.md)
   * [Installing & configuring Prometheus](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-prometheus.md)
   * [Installing & configuring Node Exporter](monitoring-updates-and-troubleshooting/set-up-monitoring-suite/installing-and-configuring-node-exporter.md)
