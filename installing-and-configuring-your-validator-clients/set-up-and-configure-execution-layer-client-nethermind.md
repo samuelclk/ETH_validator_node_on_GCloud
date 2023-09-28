@@ -103,8 +103,6 @@ Once you're done, save with `Ctrl+O` and `Enter`, then exit with `Ctrl+X`. Under
 5. `--Sync.AncientBodiesBarrier`: Prunes blocks before the [block](https://github.com/eth-clients/eth2-networks/blob/master/shared/mainnet/deposit\_contract\_block.txt) when the deposit contract became active.
 6. `--Metrics.Enabled`: Enable monitoring metrics on the Nethermind service
 
-`--config mainnet --datadir /var/lib/nethermind --JsonRpc.JwtSecretFile /var/lib/jwtsecret/jwt.hex --Sync.SnapSync true --Sync.AncientBodiesBarrier 11052984 --Sync.AncientReceiptsBarrier 11052984`
-
 ### Start Nethermind
 
 Reload the systemd daemon to register the changes made, start Nethermind, and check its status to make sure its running.
