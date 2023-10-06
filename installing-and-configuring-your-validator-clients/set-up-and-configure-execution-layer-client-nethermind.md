@@ -126,7 +126,7 @@ sudo journalctl -fu nethermind -o cat | ccze -A
 
 **Expected output:**
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>sudo journalctl -fu nethermind -o cat | ccze -A</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 Press `CTRL-C` to exit.
 
